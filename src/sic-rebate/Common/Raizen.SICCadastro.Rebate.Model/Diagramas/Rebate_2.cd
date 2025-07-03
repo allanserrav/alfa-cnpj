@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Raizen.SICCadastro.Rebate.Model.RebateSic">
+    <Position X="3.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>EIAAAAgACAACAABAACIAAIAAAAAEiAACAAAAAAEAAAA=</HashCode>
+      <FileName>RebateSic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raizen.SICCadastro.Rebate.Model.TiporebateSic">
+    <Position X="3.5" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAQACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TiporebateSic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raizen.SICCadastro.Rebate.Model.ClienteSic">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>rAAEggDAAAJAAAAkIAADAICICgQhAEACDEAAAAAAAAI=</HashCode>
+      <FileName>ClienteSic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raizen.SICCadastro.Rebate.Model.CategoriaSic">
+    <Position X="3.5" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAEAAAAAAAAAAAAAAAAAAAAAAABBIAAAAgACA=</HashCode>
+      <FileName>CategoriaSic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raizen.SICCadastro.Rebate.Model.FaixarebateSic">
+    <Position X="6.75" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAACAABAAAAAAAAAAAACEAAAADIAkAICA=</HashCode>
+      <FileName>FaixarebateSic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raizen.SICCadastro.Rebate.Model.FaixaRebateHistoricoSic">
+    <Position X="6.75" Y="4" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAACAAQAAAAAAAAAAAACEAAAADIAkAICA=</HashCode>
+      <FileName>FaixaRebateHistoricoSic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raizen.SICCadastro.Rebate.Model.CalculoRebateSic">
+    <Position X="9.75" Y="1" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AEABIAAAIAkBBgAwAAAAAAAAAAEAAAAABCBAAAEAIAA=</HashCode>
+      <FileName>CalculoRebateSic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raizen.SICCadastro.Rebate.Model.CalculoRebateFaixaSic">
+    <Position X="13.25" Y="1" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ACABAAAAAAAAAAAAAAAAFAQAAAAAAAAAAAAAAAABAAE=</HashCode>
+      <FileName>CalculoRebateFaixaSic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raizen.SICCadastro.Rebate.Model.VolumeMensalFaixaRebateSic">
+    <Position X="9.75" Y="5.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAADAAQAAAAAAAAAAkAAAABAAAAAEAACA=</HashCode>
+      <FileName>VolumeMensalFaixaRebateSic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raizen.SICCadastro.Rebate.Model.VolumeCalculoRebateFaixaSic">
+    <Position X="13" Y="5.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>VolumeCalculoRebateFaixaSic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

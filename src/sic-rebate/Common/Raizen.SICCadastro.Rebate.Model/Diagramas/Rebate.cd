@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Raizen.SICCadastro.Rebate.Model.Custom.RebateDH" Collapsed="true">
+    <Position X="7.25" Y="4.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Custom\RebateDH.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="faixas" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Raizen.SICCadastro.Rebate.Model.Custom.FaixaRebateDH" Collapsed="true">
+    <Position X="4.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Custom\FaixaRebateDH.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="categoria" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Raizen.SICCadastro.Rebate.Model.Custom.ProdutoDH" Collapsed="true">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Custom\ProdutoDH.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raizen.SICCadastro.Rebate.Model.Custom.CategoriaDH" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Custom\CategoriaDH.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="produtos" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Raizen.SICCadastro.Rebate.Model.CategoriaSic" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAEAAAAAAAAAAAAAAAAAAAAAAABBIAAAAgACA=</HashCode>
+      <FileName>CategoriaSic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raizen.SICCadastro.Rebate.Model.ProdutoSic" Collapsed="true">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAABAAAAAAAAAAAAgAABAAAAAIAACA=</HashCode>
+      <FileName>ProdutoSic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raizen.SICCadastro.Rebate.Model.FaixarebateSic" Collapsed="true">
+    <Position X="4.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAACAAAAAAAAAAAAAAACEAAAADIAkAICA=</HashCode>
+      <FileName>FaixarebateSic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raizen.SICCadastro.Rebate.Model.RebateSic" Collapsed="true">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIAAAAgACAAAAABAACAAAIAAAAAEiAACAAAAAAEAAAA=</HashCode>
+      <FileName>RebateSic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raizen.SICCadastro.Rebate.WebSite", "Raizen.SICCadastro.Rebate.WebSite\Raizen.SICCadastro.Rebate.WebSite.csproj", "{B4FFDDB2-CCF0-44C2-B63E-5A579E039966}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raizen.SICCadastro.Rebate.BLL", "..\Common\Raizen.SICCadastro.Rebate.BLL\Raizen.SICCadastro.Rebate.BLL.csproj", "{5FCE0B95-FC22-41F5-9BCC-F303D772228D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raizen.SICCadastro.Rebate.DAL", "..\Common\Raizen.SICCadastro.Rebate.DAL\Raizen.SICCadastro.Rebate.DAL.csproj", "{94641748-4E21-40B4-BBE6-C11E5EDA9277}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raizen.SICCadastro.Rebate.Model", "..\Common\Raizen.SICCadastro.Rebate.Model\Raizen.SICCadastro.Rebate.Model.csproj", "{2E9CBDD2-74C6-40AE-9E54-017419E3EDED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raizen.SICCadastro.Rebate.Util", "..\Common\Raizen.SICCadastro.Rebate.Util\Raizen.SICCadastro.Rebate.Util.csproj", "{60431B0C-124F-4D3C-8E37-684644487CBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raizen.SICCadastro.Rebate.SAL", "..\Common\Raizen.SICCadastro.Rebate.SAL\Raizen.SICCadastro.Rebate.SAL.csproj", "{A08EFB24-E937-4C66-950E-F6A3982CC137}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4FFDDB2-CCF0-44C2-B63E-5A579E039966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4FFDDB2-CCF0-44C2-B63E-5A579E039966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4FFDDB2-CCF0-44C2-B63E-5A579E039966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4FFDDB2-CCF0-44C2-B63E-5A579E039966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FCE0B95-FC22-41F5-9BCC-F303D772228D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FCE0B95-FC22-41F5-9BCC-F303D772228D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FCE0B95-FC22-41F5-9BCC-F303D772228D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FCE0B95-FC22-41F5-9BCC-F303D772228D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94641748-4E21-40B4-BBE6-C11E5EDA9277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94641748-4E21-40B4-BBE6-C11E5EDA9277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94641748-4E21-40B4-BBE6-C11E5EDA9277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94641748-4E21-40B4-BBE6-C11E5EDA9277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E9CBDD2-74C6-40AE-9E54-017419E3EDED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E9CBDD2-74C6-40AE-9E54-017419E3EDED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E9CBDD2-74C6-40AE-9E54-017419E3EDED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E9CBDD2-74C6-40AE-9E54-017419E3EDED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60431B0C-124F-4D3C-8E37-684644487CBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60431B0C-124F-4D3C-8E37-684644487CBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60431B0C-124F-4D3C-8E37-684644487CBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60431B0C-124F-4D3C-8E37-684644487CBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A08EFB24-E937-4C66-950E-F6A3982CC137}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A08EFB24-E937-4C66-950E-F6A3982CC137}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A08EFB24-E937-4C66-950E-F6A3982CC137}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A08EFB24-E937-4C66-950E-F6A3982CC137}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

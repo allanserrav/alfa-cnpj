@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5FCE0B95-FC22-41F5-9BCC-F303D772228D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Raizen.SICCadastro.Rebate.BLL</RootNamespace>
+    <AssemblyName>Raizen.SICCadastro.Rebate.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="COSAN.Framework.Factory">
+      <HintPath>..\..\Library\COSAN.Framework.Factory.dll</HintPath>
+    </Reference>
+    <Reference Include="COSAN.Framework.Util">
+      <HintPath>..\..\Library\COSAN.Framework.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgendamentoMensagemSicBLO.cs" />
+    <Compile Include="AgrupamentoredeRebateSicBLO.cs" />
+    <Compile Include="AvisoSicBLO.cs" />
+    <Compile Include="CalculoRebateFaixaSicBLO.cs" />
+    <Compile Include="CalculoRebateProporcionalSicBLO.cs" />
+    <Compile Include="AcertoCalculoRebateSicBLO.cs" />
+    <Compile Include="DadosCalculoRebateSicBLO.cs" />
+    <Compile Include="CalculoRebateSicBLO.cs" />
+    <Compile Include="CategoriaSicBLO.cs" />
+    <Compile Include="ClienteSicBLO.cs" />
+    <Compile Include="ClientestatusSicBLO.cs" />
+    <Compile Include="Custom\CalculoRebateFaixaSicBLO.cs" />
+    <Compile Include="Custom\CalculoRebateSicBLO.cs" />
+    <Compile Include="Custom\DebitoRebateSicBLO.cs" />
+    <Compile Include="Custom\FaixarebateSicBLO.cs" />
+    <Compile Include="Custom\BuscaVolumeRebateBLO.cs" />
+    <Compile Include="Custom\CalculoBonificacaoRebateBLO.cs" />
+    <Compile Include="Custom\GeradorArquivoSapBLO.cs" />
+    <Compile Include="Custom\ReajusteBonificacaoBLO.cs" />
+    <Compile Include="Custom\SaldoRebateSicBLO.cs" />
+    <Compile Include="DebitoRebateSicBLO.cs" />
+    <Compile Include="FaixaRebateHistoricoSicBLO.cs" />
+    <Compile Include="DadosCalculoFaixaRebateSicBLO.cs" />
+    <Compile Include="IgpmPeriodoSicBLO.cs" />
+    <Compile Include="Interface\Custom\IBuscaVolumeRebateBLO.cs" />
+    <Compile Include="Interface\Custom\ICalculoBonificacaoRebateBLO.cs" />
+    <Compile Include="Interface\Custom\ICalculoRebateFaixaSicBLO.cs" />
+    <Compile Include="Interface\Custom\ICalculoRebateSicBLO.cs" />
+    <Compile Include="Interface\Custom\IDebitoRebateSicBLO.cs" />
+    <Compile Include="Interface\Custom\IFaixarebateSicBLO.cs" />
+    <Compile Include="Interface\Custom\IGeradorArquivoSapBLO.cs" />
+    <Compile Include="Interface\Custom\IReajusteBonificacaoBLO.cs" />
+    <Compile Include="Interface\Custom\IRebateSicBLO.cs" />
+    <Compile Include="Interface\Custom\ISaldoRebateSicBLO.cs" />
+    <Compile Include="Interface\Custom\IVolumeMensalFaixaRebateSicBLO.cs" />
+    <Compile Include="Custom\RebateSicBLO.cs" />
+    <Compile Include="Custom\VolumeMensalFaixaRebateSicBLO.cs" />
+    <Compile Include="FaixarebateSicBLO.cs" />
+    <Compile Include="DadosArquivoRebateSicBLO.cs" />
+    <Compile Include="Interface\IAgendamentoMensagemSicBLO.cs" />
+    <Compile Include="Interface\IAgrupamentoredeRebateSicBLO.cs" />
+    <Compile Include="Interface\IAvisoSicBLO.cs" />
+    <Compile Include="Interface\ICalculoRebateFaixaSicBLO.cs" />
+    <Compile Include="Interface\ICalculoRebateProporcionalSicBLO.cs" />
+    <Compile Include="Interface\IAcertoCalculoRebateSicBLO.cs" />
+    <Compile Include="Interface\IDadosCalculoRebateSicBLO.cs" />
+    <Compile Include="Interface\ICalculoRebateSicBLO.cs" />
+    <Compile Include="Interface\ICategoriaSicBLO.cs" />
+    <Compile Include="Interface\IClienteSicBLO.cs" />
+    <Compile Include="Interface\IClientestatusSicBLO.cs" />
+    <Compile Include="Interface\IDadosArquivoRebateSicBLO.cs" />
+    <Compile Include="Interface\IDebitoRebateSicBLO.cs" />
+    <Compile Include="Interface\IFaixaRebateHistoricoSicBLO.cs" />
+    <Compile Include="Interface\IDadosCalculoFaixaRebateSicBLO.cs" />
+    <Compile Include="Interface\IFaixarebateSicBLO.cs" />
+    <Compile Include="Interface\IIgpmPeriodoSicBLO.cs" />
+    <Compile Include="Interface\ILogIntegracaoSicBLO.cs" />
+    <Compile Include="Interface\IMatrizfilialrebateSicBLO.cs" />
+    <Compile Include="Interface\IMensagemSicBLO.cs" />
+    <Compile Include="Interface\IMotivoRegimeEspecialRebateSicBLO.cs" />
+    <Compile Include="Interface\IPeriodoProcessamentoSicBLO.cs" />
+    <Compile Include="Interface\IProdutoSicBLO.cs" />
+    <Compile Include="Interface\IReajusteRebateHistoricoSicBLO.cs" />
+    <Compile Include="Interface\IReajusteRebatexfranquiaSicBLO.cs" />
+    <Compile Include="Interface\IReajusteSicBLO.cs" />
+    <Compile Include="Interface\IRebateSicBLO.cs" />
+    <Compile Include="Interface\ISaldoRebateSicBLO.cs" />
+    <Compile Include="Interface\IStatusCalculoRebateHistoricoSicBLO.cs" />
+    <Compile Include="Interface\IStatusCalculoRebateSicBLO.cs" />
+    <Compile Include="Interface\IStatusSicBLO.cs" />
+    <Compile Include="Interface\ITipoclienteSicBLO.cs" />
+    <Compile Include="Interface\ITiporebateSicBLO.cs" />
+    <Compile Include="Interface\IViewCalculoFaixaHistoricoRebateBLO.cs" />
+    <Compile Include="Interface\IViewGaClienteRebateSicBLO.cs" />
+    <Compile Include="Interface\IViewGtClienteRebateSicBLO.cs" />
+    <Compile Include="Interface\IVolumeCalculoRebateFaixaSicBLO.cs" />
+    <Compile Include="Interface\IVolumeMensalFaixaRebateSicBLO.cs" />
+    <Compile Include="LogIntegracaoSicBLO.cs" />
+    <Compile Include="MatrizfilialrebateSicBLO.cs" />
+    <Compile Include="MensagemSicBLO.cs" />
+    <Compile Include="MotivoRegimeEspecialRebateSicBLO.cs" />
+    <Compile Include="PeriodoProcessamentoSicBLO.cs" />
+    <Compile Include="ProdutoSicBLO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReajusteRebateHistoricoSicBLO.cs" />
+    <Compile Include="ReajusteRebatexfranquiaSicBLO.cs" />
+    <Compile Include="ReajusteSicBLO.cs" />
+    <Compile Include="RebateSicBLO.cs" />
+    <Compile Include="SaldoRebateSicBLO.cs" />
+    <Compile Include="StatusCalculoRebateHistoricoSicBLO.cs" />
+    <Compile Include="StatusCalculoRebateSicBLO.cs" />
+    <Compile Include="StatusSicBLO.cs" />
+    <Compile Include="TipoclienteSicBLO.cs" />
+    <Compile Include="TiporebateSicBLO.cs" />
+    <Compile Include="ViewCalculoFaixaHistoricoRebateBLO.cs" />
+    <Compile Include="ViewGaClienteRebateSicBLO.cs" />
+    <Compile Include="ViewGtClienteRebateSicBLO.cs" />
+    <Compile Include="VolumeCalculoRebateFaixaSicBLO.cs" />
+    <Compile Include="VolumeMensalFaixaRebateSicBLO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Raizen.SICCadastro.Rebate.DAL\Raizen.SICCadastro.Rebate.DAL.csproj">
+      <Project>{94641748-4E21-40B4-BBE6-C11E5EDA9277}</Project>
+      <Name>Raizen.SICCadastro.Rebate.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Raizen.SICCadastro.Rebate.Model\Raizen.SICCadastro.Rebate.Model.csproj">
+      <Project>{2E9CBDD2-74C6-40AE-9E54-017419E3EDED}</Project>
+      <Name>Raizen.SICCadastro.Rebate.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Raizen.SICCadastro.Rebate.SAL\Raizen.SICCadastro.Rebate.SAL.csproj">
+      <Project>{A08EFB24-E937-4C66-950E-F6A3982CC137}</Project>
+      <Name>Raizen.SICCadastro.Rebate.SAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Raizen.SICCadastro.Rebate.Util\Raizen.SICCadastro.Rebate.Util.csproj">
+      <Project>{60431B0C-124F-4D3C-8E37-684644487CBB}</Project>
+      <Name>Raizen.SICCadastro.Rebate.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

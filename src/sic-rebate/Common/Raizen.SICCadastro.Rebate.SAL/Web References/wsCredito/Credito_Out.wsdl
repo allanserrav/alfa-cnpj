@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="urn:minhati.com.br/sicle/credito" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="Credito_Out" targetNamespace="urn:minhati.com.br/sicle/credito" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_Consultar_Sync" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:minhati.com.br/sicle/credito" targetNamespace="urn:minhati.com.br/sicle/credito" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="ConsultarFault">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="standard" type="p1:ExchangeFaultData" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ConsultarRequest" type="p1:ConsultarRequest" />
+      <xsd:element name="ConsultarResponse" type="p1:ConsultarResponse" />
+      <xsd:complexType name="ConsultarRequest">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">28afd8e31b7811e5bcd8000000322166</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="Ambiente" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">81abbae91c0611e58c35266d57825965</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="Data" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">81abbaea1c0611e58594266d57825965</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="AreaCredito">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">81abbaeb1c0611e58fef266d57825965</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="Cliente">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">81abbaec1c0611e59526266d57825965</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ExchangeFaultData">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">1706f4451b7811e5a6f5000000322166</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="faultText" type="xsd:string" />
+          <xsd:element minOccurs="0" name="faultUrl" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="faultDetail" type="p1:ExchangeLogData" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ExchangeLogData">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">170beff91b7811e58af1000000322166</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="severity" type="xsd:string" />
+          <xsd:element name="text" type="xsd:string" />
+          <xsd:element minOccurs="0" name="url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="id" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ConsultarResponse">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">8e5bea3b1c0611e5af60000000322166</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Moeda">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">65f4827e1c3d11e5beeb266d57825965</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="5" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="LimCredito">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">65f4827f1c3d11e5bc03266d57825965</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="15" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ExcLimCred">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">65f4b8581c3d11e5ab79266d57825965</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="15" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="Cliente">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">65f576e81c3d11e5a70a266d57825965</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="Cliente">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f4b8591c3d11e5bf8c266d57825965</xsd:appinfo>
+                    <xsd:documentation>Customer Number 1</xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="10" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="AreaCred">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f4b85a1c3d11e58fdf266d57825965</xsd:appinfo>
+                    <xsd:documentation>Credit control area</xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="4" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="LimCred">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f4b85b1c3d11e58452266d57825965</xsd:appinfo>
+                    <xsd:documentation>Customer's credit limit</xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:decimal">
+                      <xsd:totalDigits value="15" />
+                      <xsd:fractionDigits value="2" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Conta">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f4b85c1c3d11e5a288266d57825965</xsd:appinfo>
+                    <xsd:documentation>Customer's account number with credit limit reference</xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="10" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="TotOrdem">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f4d26c1c3d11e5b236266d57825965</xsd:appinfo>
+                    <xsd:documentation>Total of the sales values for the credit limit check</xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:decimal">
+                      <xsd:totalDigits value="15" />
+                      <xsd:fractionDigits value="2" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="TotDivRecb">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f4d26d1c3d11e5cff0266d57825965</xsd:appinfo>
+                    <xsd:documentation>Total receivables (for credit limit check)</xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:decimal">
+                      <xsd:totalDigits value="15" />
+                      <xsd:fractionDigits value="2" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="CompEspecial">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f4d26e1c3d11e5ac55266d57825965</xsd:appinfo>
+                    <xsd:documentation>Relevant special liabilities for credit limit check</xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:decimal">
+                      <xsd:totalDigits value="15" />
+                      <xsd:fractionDigits value="2" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DtExcedido" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f4d26f1c3d11e5ca65266d57825965</xsd:appinfo>
+                    <xsd:documentation>Date on which the credit limit was exceeded</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="NomResp">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f4d2701c3d11e5addb266d57825965</xsd:appinfo>
+                    <xsd:documentation>Name of Person who Created the Object</xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="12" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DtCriacao" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f4d2711c3d11e5c833266d57825965</xsd:appinfo>
+                    <xsd:documentation>Date on which the Record Was Created</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ClRisco">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f4d2721c3d11e58b5d266d57825965</xsd:appinfo>
+                    <xsd:documentation>Credit management: Risk category</xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="3" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DtVerifInt" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f4f3da1c3d11e5b0f9266d57825965</xsd:appinfo>
+                    <xsd:documentation>Last internal review</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Bloqueio">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f4f3db1c3d11e5c80e266d57825965</xsd:appinfo>
+                    <xsd:documentation>Indicator: Blocked by credit management ?</xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="1" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="GrpResp">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f4f3dc1c3d11e5cec8266d57825965</xsd:appinfo>
+                    <xsd:documentation>Credit representative group for credit management</xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="3" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="VerSeguinte" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f4f3dd1c3d11e5995b266d57825965</xsd:appinfo>
+                    <xsd:documentation>Next internal review</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="NumCred">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f4f3de1c3d11e5b2bb266d57825965</xsd:appinfo>
+                    <xsd:documentation>Credit information number</xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="11" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DtVerifExt" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f4f3df1c3d11e5c22c266d57825965</xsd:appinfo>
+                    <xsd:documentation>Last review (external)</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DtUltMod" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f532461c3d11e5bf99266d57825965</xsd:appinfo>
+                    <xsd:documentation>Date of Last Change</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DtUltTexto" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f532471c3d11e5cb01266d57825965</xsd:appinfo>
+                    <xsd:documentation>Date of Last Text Change</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="GrpCredito">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f532481c3d11e5aa6f266d57825965</xsd:appinfo>
+                    <xsd:documentation>Customer Credit Group</xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="4" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="NmUltMod">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f532491c3d11e5ae7e266d57825965</xsd:appinfo>
+                    <xsd:documentation>Last changed by</xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="12" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DtReferencia" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f5571e1c3d11e586e1266d57825965</xsd:appinfo>
+                    <xsd:documentation>Reference Date</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="GrpCliente">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f5571f1c3d11e5bb9e266d57825965</xsd:appinfo>
+                    <xsd:documentation>Customer Group</xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="8" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DtPagmto" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f557201c3d11e5896f266d57825965</xsd:appinfo>
+                    <xsd:documentation>Date of Last Payment</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="VlultPagmto">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f557211c3d11e5bf23266d57825965</xsd:appinfo>
+                    <xsd:documentation>Amount of Last Payment</xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:decimal">
+                      <xsd:totalDigits value="13" />
+                      <xsd:fractionDigits value="2" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="MoeUltPagmto">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">65f557221c3d11e59302266d57825965</xsd:appinfo>
+                    <xsd:documentation>Currency of Last Payment</xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="5" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="Conta">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">65f576e91c3d11e59840266d57825965</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="VlPendente">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">65f576ea1c3d11e59538266d57825965</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="19" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="VlCredPend">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">65f576eb1c3d11e5b1d1266d57825965</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="19" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="TotDividas">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">65f576ec1c3d11e59e1d266d57825965</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="15" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="VlCredito">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">65f590a41c3d11e5c3f7266d57825965</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="19" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="CompEspecial">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">65f590a51c3d11e59633266d57825965</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="15" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="Esgotamento">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">65f590a61c3d11e5a1cc266d57825965</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:pattern value="\d+" />
+                <xsd:maxLength value="3" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="TotComp">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">65f590a71c3d11e5ad05266d57825965</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="15" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ConsultarRequest">
+    <wsdl:documentation />
+    <wsdl:part name="ConsultarRequest" element="p1:ConsultarRequest" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarResponse">
+    <wsdl:documentation />
+    <wsdl:part name="ConsultarResponse" element="p1:ConsultarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFault">
+    <wsdl:documentation />
+    <wsdl:part name="ConsultarFault" element="p1:ConsultarFault" />
+  </wsdl:message>
+  <wsdl:portType name="Credito_Out">
+    <wsdl:documentation />
+    <wsdl:operation name="Consultar_Sync">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_Consultar_Sync" />
+      </wsp:Policy>
+      <wsdl:input message="p1:ConsultarRequest" />
+      <wsdl:output message="p1:ConsultarResponse" />
+      <wsdl:fault name="ConsultarFault" message="p1:ConsultarFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Credito_OutBinding" type="p1:Credito_Out">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="Consultar_Sync">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+      <wsdl:fault name="ConsultarFault">
+        <fault use="literal" name="ConsultarFault" namespace="" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Credito_OutService">
+    <wsdl:port name="HTTP_Port" binding="p1:Credito_OutBinding">
+      <address location="http://cpsvsappid01.cosan.rede:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=SIC&amp;receiverParty=&amp;receiverService=&amp;interface=Credito_Out&amp;interfaceNamespace=urn%3Aminhati.com.br%2Fsicle%2Fcredito" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:Credito_OutBinding">
+      <address location="https://cpsvsappid01.cosan.rede:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=SIC&amp;receiverParty=&amp;receiverService=&amp;interface=Credito_Out&amp;interfaceNamespace=urn%3Aminhati.com.br%2Fsicle%2Fcredito" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

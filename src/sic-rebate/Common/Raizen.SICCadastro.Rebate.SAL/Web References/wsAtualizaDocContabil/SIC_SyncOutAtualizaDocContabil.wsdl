@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="urn:sic.raizen.com/xi/fi" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SIC_SyncOutAtualizaDocContabil" targetNamespace="urn:sic.raizen.com/xi/fi" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SIC_SyncOutAtualizaDocContabil" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:sic.raizen.com/xi/fi" targetNamespace="urn:sic.raizen.com/xi/fi" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="FaultAtualizaDocContabil">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="standard" type="p1:ExchangeFaultData" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ResponseAtualizaDocContabil" type="p1:ResponseAtualizaDocContabil" />
+      <xsd:element name="RequestAtualizaDocContabil" type="p1:RequestAtualizaDocContabil" />
+      <xsd:complexType name="ExchangeFaultData">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">75b55a83af6211e3c4b00000011d4d4e</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="faultText" type="xsd:string" />
+          <xsd:element minOccurs="0" name="faultUrl" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="faultDetail" type="p1:ExchangeLogData" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ResponseAtualizaDocContabil">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/TextID">a3d82c43084111e8aa8e000000bb2aa7</xsd:appinfo>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">19d7fbec680811e7aec10000011d4d4e</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Retorno">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">38c8c2a0455411e7a9f11c39470d49f8</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="item">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">38c8c2a1455411e7bc9f1c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element minOccurs="0" name="Empresa">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">38c8c2a2455411e7aee21c39470d49f8</xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                          <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="4" />
+                          </xsd:restriction>
+                        </xsd:simpleType>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="NoDocumento">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">38c8c2a3455411e7b60a1c39470d49f8</xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                          <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="10" />
+                          </xsd:restriction>
+                        </xsd:simpleType>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="Exercicio">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">38c8c2a4455411e7a03f1c39470d49f8</xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                          <xsd:restriction base="xsd:string">
+                            <xsd:pattern value="\d+" />
+                            <xsd:maxLength value="4" />
+                          </xsd:restriction>
+                        </xsd:simpleType>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="ItemDoc">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">38c8c2a5455411e7bd3a1c39470d49f8</xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                          <xsd:restriction base="xsd:string">
+                            <xsd:pattern value="\d+" />
+                            <xsd:maxLength value="3" />
+                          </xsd:restriction>
+                        </xsd:simpleType>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="Mensagem">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">38c8c2a6455411e79e9b1c39470d49f8</xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                          <xsd:restriction base="xsd:string">
+                            <xsd:pattern value="\d+" />
+                            <xsd:maxLength value="3" />
+                          </xsd:restriction>
+                        </xsd:simpleType>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="Tipo">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">38c8c2a7455411e7b1291c39470d49f8</xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                          <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="1" />
+                          </xsd:restriction>
+                        </xsd:simpleType>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="Id">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">38c8c2a8455411e796b61c39470d49f8</xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                          <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="20" />
+                          </xsd:restriction>
+                        </xsd:simpleType>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="No">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">38c8c2a9455411e7cdf31c39470d49f8</xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                          <xsd:restriction base="xsd:string">
+                            <xsd:pattern value="\d+" />
+                            <xsd:maxLength value="3" />
+                          </xsd:restriction>
+                        </xsd:simpleType>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="Msg">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">38c8c2aa455411e7969a1c39470d49f8</xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                          <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="220" />
+                          </xsd:restriction>
+                        </xsd:simpleType>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="Debito">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">1457b990680811e7ba8e1c39470d49f8</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="Empresa">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">1457b991680811e7b3ec1c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="4" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="cliente">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">1457b992680811e7b8231c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="10" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Sucesso">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">1457b993680811e7c3b91c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="1" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="Execucao">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">1457b994680811e79e371c39470d49f8</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="Empresa">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">1457b995680811e7a3e21c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="4" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="NoDocContab">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">1457b996680811e7ae361c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="10" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Exercicio">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">1457b997680811e79df31c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:pattern value="\d+" />
+                      <xsd:maxLength value="4" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ItemDocContab">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">1457b998680811e7a5631c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:pattern value="\d+" />
+                      <xsd:maxLength value="3" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Sucesso">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">1457b999680811e78df51c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="1" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RequestAtualizaDocContabil">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/TextID">a4c37352084111e88c0d000000bb2aa7</xsd:appinfo>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">2daef61a454511e7b28e0000011d4d4e</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Debito">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">3ce10a00455411e794de1c39470d49f8</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="Empresa">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">3ce10a01455411e7aab11c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="4" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="NoCliente">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">3ce10a02455411e78a341c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="10" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="AtualizaDoc">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">3ce10a03455411e7c8171c39470d49f8</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="Empresa">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">3ce10a04455411e7bfe41c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="4" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="NoDocumento">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">3ce10a05455411e7c65f1c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="10" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Exercicio">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">3ce10a06455411e7aca21c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:pattern value="\d+" />
+                      <xsd:maxLength value="4" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ItemDoc">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">3ce10a07455411e795721c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:pattern value="\d+" />
+                      <xsd:maxLength value="3" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="FlagBloq">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">3ce10a08455411e786361c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="1" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="BloqPagto">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">3ce10a09455411e79f1f1c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="1" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="FlagFormPagto">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">3ce10a0a455411e79fc21c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="1" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="FormPagto">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">3ce10a0b455411e7bfb81c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="1" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DtVencto" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">3ce10a0c455411e7b3ca1c39470d49f8</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ExchangeLogData">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">75551b4daf6211e3888d0000011d4d4e</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="severity" type="xsd:string" />
+          <xsd:element name="text" type="xsd:string" />
+          <xsd:element minOccurs="0" name="url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="id" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="RequestAtualizaDocContabil">
+    <wsdl:documentation />
+    <wsdl:part name="RequestAtualizaDocContabil" element="p1:RequestAtualizaDocContabil" />
+  </wsdl:message>
+  <wsdl:message name="ResponseAtualizaDocContabil">
+    <wsdl:documentation />
+    <wsdl:part name="ResponseAtualizaDocContabil" element="p1:ResponseAtualizaDocContabil" />
+  </wsdl:message>
+  <wsdl:message name="FaultAtualizaDocContabil">
+    <wsdl:documentation />
+    <wsdl:part name="FaultAtualizaDocContabil" element="p1:FaultAtualizaDocContabil" />
+  </wsdl:message>
+  <wsdl:portType name="SIC_SyncOutAtualizaDocContabil">
+    <wsdl:documentation />
+    <wsdl:operation name="SIC_SyncOutAtualizaDocContabil">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SIC_SyncOutAtualizaDocContabil" />
+      </wsp:Policy>
+      <wsdl:input message="p1:RequestAtualizaDocContabil" />
+      <wsdl:output message="p1:ResponseAtualizaDocContabil" />
+      <wsdl:fault name="FaultAtualizaDocContabil" message="p1:FaultAtualizaDocContabil" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SIC_SyncOutAtualizaDocContabilBinding" type="p1:SIC_SyncOutAtualizaDocContabil">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SIC_SyncOutAtualizaDocContabil">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+      <wsdl:fault name="FaultAtualizaDocContabil">
+        <fault use="literal" name="FaultAtualizaDocContabil" namespace="" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SIC_SyncOutAtualizaDocContabilService">
+    <wsdl:port name="HTTP_Port" binding="p1:SIC_SyncOutAtualizaDocContabilBinding">
+      <address location="http://cpsvsappid01.cosan.rede:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=SIC&amp;receiverParty=&amp;receiverService=&amp;interface=SIC_SyncOutAtualizaDocContabil&amp;interfaceNamespace=urn%3Asic.raizen.com%2Fxi%2Ffi" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SIC_SyncOutAtualizaDocContabilBinding">
+      <address location="https://cpsvsappid01.cosan.rede:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=SIC&amp;receiverParty=&amp;receiverService=&amp;interface=SIC_SyncOutAtualizaDocContabil&amp;interfaceNamespace=urn%3Asic.raizen.com%2Fxi%2Ffi" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AlertaAprovarGerenteSemEnviar" xml:space="preserve">
+    <value>Somente cálculos enviados pelo analista podem ser aprovados pelo gestor, revise a seleção atual!</value>
+  </data>
+  <data name="AlertaBonificacaoCanceladaPagaEnviada" xml:space="preserve">
+    <value>Somente cálculos que ainda não foram cancelados, enviados para pagamento ou pagos podem ser selecionados para esta ação!</value>
+  </data>
+  <data name="AlertaBonificacaoPaga" xml:space="preserve">
+    <value>Somente cálculo não pagos podem ser selecionados para esta ação, revise a seleção atual!</value>
+  </data>
+  <data name="AlertaCalculoPagamentoManual" xml:space="preserve">
+    <value>Bonificação não encontrada.</value>
+  </data>
+  <data name="AlertaDataInicialMaiorDataFinal" xml:space="preserve">
+    <value>Data inicial da consulta deve ser menor que a data final!</value>
+  </data>
+  <data name="AlertaExibicaoPrimeiros" xml:space="preserve">
+    <value>Serão exibidos somente os 20 primeiros resultados da consulta. Para visualizar maiores detalhes, execute a geração do arquivo excel.</value>
+  </data>
+  <data name="AlertaFiltroPagamentoBonificacaoVazio" xml:space="preserve">
+    <value>Com os Filtros informados nenhum calculo foi localizado!</value>
+  </data>
+  <data name="AlertaGridDetalheAditivo" xml:space="preserve">
+    <value>Aditivo de Bonificação</value>
+  </data>
+  <data name="AlertaInformePeriodoCalculoAditivo" xml:space="preserve">
+    <value>Por favor informar o período para cálculo do aditivo!</value>
+  </data>
+  <data name="AlertaNumeroCalculoRebate" xml:space="preserve">
+    <value>Número Calculo Rebate não informado</value>
+  </data>
+  <data name="AlertaNumeroRebate" xml:space="preserve">
+    <value>Número Rebate não informado.</value>
+  </data>
+  <data name="AlertaObservacaoPagtoManual" xml:space="preserve">
+    <value>Informe uma observação para o pagamento manual.</value>
+  </data>
+  <data name="AlertaPerdaSelecao" xml:space="preserve">
+    <value>A seleção atual será perdida!</value>
+  </data>
+  <data name="AlertaPeriodoValido" xml:space="preserve">
+    <value>Por favor, digite um período válido.</value>
+  </data>
+  <data name="AlertaPesquisaExtrato" xml:space="preserve">
+    <value>Informe IBM, data inicial e data final do período para realizar a consulta!</value>
+  </data>
+  <data name="AlertaPesquisaInfoCliente" xml:space="preserve">
+    <value>Informe ao menos um tipo de rebate e um tipo de status cliente para a pesquisa!</value>
+  </data>
+  <data name="AlertaPesquisaPeriodo" xml:space="preserve">
+    <value>As datas inicial e final do período para a consulta devem ser informadas!</value>
+  </data>
+  <data name="AlertaPesquisaSemFiltros" xml:space="preserve">
+    <value>Informe ao menos período, IBM ou situação para a pesquisa!</value>
+  </data>
+  <data name="AlertaPesquisaTipoRebate" xml:space="preserve">
+    <value>Informe ao menos um tipo de rebate para a pesquisa!</value>
+  </data>
+  <data name="AlertaReaprovarAnalista" xml:space="preserve">
+    <value>Somente cálculos não aprovados pelo analista podem ser selecionados, revise a seleção atual!</value>
+  </data>
+  <data name="AlertaReaprovarGerente" xml:space="preserve">
+    <value>Somente cálculos não pagos podem ser selecionados, revise a seleção atual!</value>
+  </data>
+  <data name="AlertaReenviarGerente" xml:space="preserve">
+    <value>Somente cálculos não enviados pelo analista podem ser selecionados, revise a seleção atual!</value>
+  </data>
+  <data name="AlertaReprovarGerenteSemEnviar" xml:space="preserve">
+    <value>Somente cálculos enviados pelo analista podem ser reprovados pelo gestor, revise a seleção atual!</value>
+  </data>
+  <data name="AlertaSelecaoEnviarSemAprovar" xml:space="preserve">
+    <value>Somente cálculos aprovados pelo analista podem ser enviados para aprovação do gestor, revise a seleção atual!</value>
+  </data>
+  <data name="AlertaSelecaoNula" xml:space="preserve">
+    <value>Selecione ao menos uma linha!</value>
+  </data>
+  <data name="AlertaSelecionarStatus" xml:space="preserve">
+    <value>Por favor selecionar um status.</value>
+  </data>
+  <data name="AlertaStatusInformacoesInconsistentes" xml:space="preserve">
+    <value>O status atual é Informações Inconsistentes, por isso não é possível alterá-lo.</value>
+  </data>
+  <data name="AlertaStatusPago" xml:space="preserve">
+    <value>Somente Rebates com status Pago podem ter o status alterado.</value>
+  </data>
+  <data name="AlteracaoStatus" xml:space="preserve">
+    <value>Alteração de Status</value>
+  </data>
+  <data name="ConfirmarAditivo" xml:space="preserve">
+    <value>Calcular Aditivo</value>
+  </data>
+  <data name="ConfirmarAprovar" xml:space="preserve">
+    <value>Aprovar Bonificação</value>
+  </data>
+  <data name="ConfirmarConsultaDebito" xml:space="preserve">
+    <value>Consultar Débitos</value>
+  </data>
+  <data name="ConfirmarDialog" xml:space="preserve">
+    <value>Deseja confirmar a operação {0}?</value>
+  </data>
+  <data name="ConfirmarEnviar" xml:space="preserve">
+    <value>Enviar Para Aprovação Gerencial</value>
+  </data>
+  <data name="ConfirmarOutrasOperacoes" xml:space="preserve">
+    <value>Deseja consultar outras operações para este cálculo?</value>
+  </data>
+  <data name="ConfirmarPagamentoManual" xml:space="preserve">
+    <value>Pagamento Manual</value>
+  </data>
+  <data name="ConfirmarRecalculo" xml:space="preserve">
+    <value>Recalcular Bonificação (último período) {0}</value>
+  </data>
+  <data name="ConfirmarReprovar" xml:space="preserve">
+    <value>Reprovar Bonificação</value>
+  </data>
+  <data name="ConfirmarRetroativo" xml:space="preserve">
+    <value>Cálculo Retroativo</value>
+  </data>
+  <data name="ErroAditivo" xml:space="preserve">
+    <value>Não foi possível realizar o cálculo do aditivo</value>
+  </data>
+  <data name="ErroAlteracaoStatus" xml:space="preserve">
+    <value>Não foi possível alterar o status do cliente.</value>
+  </data>
+  <data name="ErroCalculoRetroativo" xml:space="preserve">
+    <value>Não foi possível realizar o cálculo retroativo</value>
+  </data>
+  <data name="ErroConsultaIBM" xml:space="preserve">
+    <value>Rebate não encontrado para o IBM informado!</value>
+  </data>
+  <data name="ErroConsultarBonificacao" xml:space="preserve">
+    <value>Não foi possível executar a consulta.</value>
+  </data>
+  <data name="ErroConsultarDetalhe" xml:space="preserve">
+    <value>Não foi possível exibir os detalhes deste cálculo.</value>
+  </data>
+  <data name="ErroConsultarDetalheCliente" xml:space="preserve">
+    <value>Não foi possível exibir os detalhes deste cliente.</value>
+  </data>
+  <data name="ErroGenerico" xml:space="preserve">
+    <value>Não foi possível executar a ação solicitada.</value>
+  </data>
+  <data name="ErroGerarExcel" xml:space="preserve">
+    <value>Não existem registros para serem exibidos, por favor realize uma consulta!</value>
+  </data>
+  <data name="ErroPagamentoManual" xml:space="preserve">
+    <value>Não foi possivel executar o pagamento manual</value>
+  </data>
+  <data name="ErroPeriodoRecalculo" xml:space="preserve">
+    <value>Não foi possível encontrar o período para recálculo.</value>
+  </data>
+  <data name="ErroRecalcular" xml:space="preserve">
+    <value>Não foi possível realizar o Recálculo do último período.</value>
+  </data>
+  <data name="MsgRecalculoSucesso" xml:space="preserve">
+    <value>Bonificação Recalculada com sucesso!</value>
+  </data>
+  <data name="MsgRetroativoSucesso" xml:space="preserve">
+    <value>Cálculo Retroativo realizado com sucesso!</value>
+  </data>
+  <data name="MsgStatusSucesso" xml:space="preserve">
+    <value>Status alterado com sucesso!</value>
+  </data>
+  <data name="MsgSucessoAditivo" xml:space="preserve">
+    <value>Cálculo do Aditivo realizado com sucesso!</value>
+  </data>
+  <data name="MsgSucessoPagtoManual" xml:space="preserve">
+    <value>Operação realizada com sucesso!</value>
+  </data>
+  <data name="MsgErroTipoRestricao" xml:space="preserve">
+    <value>Houve um erro na operação de Tipo de Restrição. Tente mais tarde ou entre em contato com o administrador.</value>
+  </data>
+  <data name="MsgTipoRestricaoVazio" xml:space="preserve">
+    <value>O campo Tipo de Restrição não pode ser vazio.</value>
+  </data>
+  <data name="MsgTipoRestricaoSucesso" xml:space="preserve">
+    <value>O Tipo de Restrição foi gravado com sucesso.</value>
+  </data>
+  <data name="MsgTipoRestricaoExcluirSucesso" xml:space="preserve">
+    <value>O Tipo de Restrição foi excluído com sucesso.</value>
+  </data>
+  <data name="MsgRestricaoExcluirSucesso" xml:space="preserve">
+    <value>A Restrição foi excluída com sucesso.</value>
+  </data>
+  <data name="MsgRestricaoSucesso" xml:space="preserve">
+    <value>A Restrição foi gravada com sucesso.</value>
+  </data>
+  <data name="MsgRestricaoVazio" xml:space="preserve">
+    <value>Os campos IBM e ao menos um tipo de restrição são obrigatórios.</value>
+  </data>
+  <data name="MsgErroRestricao" xml:space="preserve">
+    <value>Houve um erro na operação de Restrição. Tente mais tarde ou entre em contato com o administrador.</value>
+  </data>
+  <data name="MsgBotaoVoltar" xml:space="preserve">
+    <value>Deseja realmente retornar a página de listagem?</value>
+  </data>
+  <data name="MsgErroRestricaoIBMExistente" xml:space="preserve">
+    <value>Houve um erro na operação de Restrição. O IBM já está cadastrado com Restrição.</value>
+  </data>
+  <data name="MsgErroTipoRestricaoEmUso" xml:space="preserve">
+    <value>Este tipo de restrição não pode ser excluído, pois está vinculado a uma Restrição de um IBM.</value>
+  </data>
+  
+</root>

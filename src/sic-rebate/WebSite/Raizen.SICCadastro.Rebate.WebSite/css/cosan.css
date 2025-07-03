@@ -1,0 +1,222 @@
+﻿body {
+    background-color: #EDEFEF;
+    background-image: url(Images/Backgrounds/body-background.png);
+    background-repeat: repeat-x;
+    font-size: small;
+    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    color: #696969;
+}
+
+a { color: #0069B8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Page Structure */
+.container { width: 950px; margin: 0 auto; }
+.column { float: left; margin-right: 10px; }
+.last { margin-right: 0; }
+.span-5 { width: 230px; }
+.span-7 { width: 270px; }
+.span-8 { width: 310px; }
+.span-16 { width: 630px; }
+.span-17 { width: 670px; }
+
+.top-menu { width: 950px; margin: 0 auto; color: #fff; text-align: right; height: 21px; }
+.header { width: 950px; margin: 0 auto; height: 104px; }
+.main-menu { width: 950px; margin: 0 auto; height: 32px; text-align: right; }
+.content { width: 920px; margin: 0 auto; background-color: #fff; min-height: 400px; padding: 15px; border: 1px solid #494747; }
+.footer { width: 950px; margin: 0 auto; line-height: 18px; font-size: smaller; }
+.footer a { color: #696969; text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+.spacer { width: 100%; border-bottom: 1px solid #0069B8; }
+
+/* Top menu */
+ul#menu
+{
+    padding: 0 0 2px;
+    position: relative;
+    margin: 0;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: smaller;
+}
+
+ul#menu li
+{
+    display: inline;
+    list-style: none;
+}
+
+ul#menu li#greeting
+{
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    color: #fff;
+}
+
+ul#menu li a
+{
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    background-color: #0077C2;
+    color: #fff;
+}
+
+ul#menu li a:hover
+{
+    background-color: #0069B8;
+    text-decoration: none;
+    color: #fff;
+}
+
+ul#menu li a:active
+{
+    background-color: #fff;
+    text-decoration: none;
+}
+
+ul#menu li.selected a
+{
+    background-color: #fff;
+    color: #000;
+}
+
+/* CONTROLS */
+fieldset 
+{
+    border:1px solid #ddd;
+    padding:0 1.4em 1.4em 1.4em;
+    margin:0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size:1.2em;
+    font-weight: bold;
+    color: #0069B8;
+}
+
+textarea 
+{
+    min-width: 350px;
+    min-height: 120px;
+    border: 1px solid #BADFF1;
+    padding: 3px;
+    color: #696969;
+}
+
+input[type="text"] 
+{
+    min-width: 200px;
+    border: 1px solid #BADFF1;
+    padding: 3px;
+    color: #696969;
+}
+
+input[type="password"] 
+{
+    min-width: 200px;
+    border: 1px solid #BADFF1;
+    padding: 3px;
+    color: #696969;
+}
+
+input[type="checkbox"] 
+{
+    padding: 3px;
+    color: #696969;
+}
+
+input[type="checkbox"] 
+{
+    padding: 3px;
+    color: #696969;
+}
+
+input[type="submit"] 
+{
+    background-image: url(Images/Backgrounds/base-button-bg.png);
+    background-repeat: repeat-x;
+    min-width: 150px;
+    height: 30px;
+    color: #fff;
+    border: none;
+}
+
+select
+{
+    min-width: 200px;
+    border: 1px solid #BADFF1;
+    padding: 3px;
+    color: #696969;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label,
+.editor-label
+{
+    margin: 1em 0 0 0;
+    font-weight: bold;
+}
+
+.display-field,
+.editor-field
+{
+    margin:0.5em 0 0 0;    
+}
+
+.text-box
+{
+    width: 30em;
+}
+
+.text-box.multi-line
+{
+    height: 6.5em;
+}
+
+.tri-state
+{
+    width: 6em;
+}
+
+.form-label { height:25px; padding-top: 5px; }
+.form-field { height:25px; background-color: #F1F6F9; min-width: 450px; padding: 3px; margin: 1px; color: #0069B8 }
+
+/* tables */
+table { min-width: 70%; border: 1px solid #BADFF1; border-collapse: collapse; }
+th { background-color: #F1F6F9; height: 30px; color: #0069B8; }
+tr { border-bottom: 1px solid #F8F2F7; }
+tr:hover { background-color: #FCFAFC; } 
+td { padding: 3px; } 
+
+.alert
+{
+    width: 450px;    
+    padding: 15px;
+    border: 1px solid #CD0A0A;
+    background-color: #FEF8F6;
+    color: #CD0A0A;
+}
+
+.success
+{
+    width: 450px;    
+    padding: 15px;
+    border: 1px solid #FCEFA1;
+    background-color: #FCFAF1;
+    color: #363636;    
+}
+
+
+/* Texts */
+.text-align-right { text-align: right; }
+.text-align-left { text-align: left; }
+.text-align-center { text-align: center; }

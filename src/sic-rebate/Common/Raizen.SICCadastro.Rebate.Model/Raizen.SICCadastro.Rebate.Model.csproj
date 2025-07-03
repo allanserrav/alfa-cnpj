@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2E9CBDD2-74C6-40AE-9E54-017419E3EDED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Raizen.SICCadastro.Rebate.Model</RootNamespace>
+    <AssemblyName>Raizen.SICCadastro.Rebate.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcertoCalculoRebateSic.cs" />
+    <Compile Include="Custom\MensagemControleValidacao.cs" />
+    <Compile Include="DadosCalculoRebateFaixaSic.cs" />
+    <Compile Include="DadosCalculoRebateSic.cs" />
+    <Compile Include="AgendamentoMensagemSic.cs" />
+    <Compile Include="AgrupamentoredeRebateSic.cs" />
+    <Compile Include="AvisoSic.cs" />
+    <Compile Include="CalculoRebateFaixaSic.cs" />
+    <Compile Include="CalculoRebateProporcionalSic.cs" />
+    <Compile Include="CalculoRebateSic.cs" />
+    <Compile Include="CategoriaSic.cs" />
+    <Compile Include="ClienteSic.cs" />
+    <Compile Include="ClientestatusSic.cs" />
+    <Compile Include="Custom\DadosBonificacaoRebate.cs" />
+    <Compile Include="Custom\EmpresaCliente.cs" />
+    <Compile Include="Custom\DebitoRbc.cs" />
+    <Compile Include="Custom\ComparaFaixaRebatePorCategoria.cs" />
+    <Compile Include="Custom\FaixarebateSic.cs" />
+    <Compile Include="Custom\IBMFornecedor.cs" />
+    <Compile Include="Custom\RebateFaixaAgrupador.cs" />
+    <Compile Include="Custom\RebateSic.cs" />
+    <Compile Include="Custom\StatusCalculoRebate.cs" />
+    <Compile Include="Custom\VolumeMensalFaixaRebateSic.cs" />
+    <Compile Include="DadosArquivoRebateSic.cs" />
+    <Compile Include="DebitoRebateSic.cs" />
+    <Compile Include="Enum\TipoRebate.cs" />
+    <Compile Include="FaixaRebateHistoricoSic.cs" />
+    <Compile Include="Custom\Mensagem.cs" />
+    <Compile Include="FaixarebateSic.cs" />
+    <Compile Include="Grid\BonificacaoGridDetalhe.cs" />
+    <Compile Include="Grid\BonificacaoGrid.cs" />
+    <Compile Include="Grid\BonificacaoProporcionalGrid.cs" />
+    <Compile Include="Grid\ComparaBonificacaoGridPorCodigoRebate.cs" />
+    <Compile Include="Grid\FiltroBonificacaoGrid.cs" />
+    <Compile Include="Grid\FiltroLogIntegracaoSic.cs" />
+    <Compile Include="IgpmPeriodoSic.cs" />
+    <Compile Include="LogIntegracaoSic.cs" />
+    <Compile Include="LogRebateRetroativoFiltro.cs" />
+    <Compile Include="LogRebateRetroativo.cs" />
+    <Compile Include="MatrizfilialrebateSic.cs" />
+    <Compile Include="MensagemSic.cs" />
+    <Compile Include="MotivoRegimeEspecialRebateSic.cs" />
+    <Compile Include="PeriodoProcessamentoSic.cs" />
+    <Compile Include="ProdutoSic.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReajusteRebateHistoricoSic.cs" />
+    <Compile Include="ReajusteRebatexfranquiaSic.cs" />
+    <Compile Include="ReajusteSic.cs" />
+    <Compile Include="RebateSic.cs" />
+    <Compile Include="Relatorio\InformacaoRebateRel.cs" />
+    <Compile Include="Relatorio\InformacaoRebateRelFiltro.cs" />
+    <Compile Include="RebateDetailIbm.cs" />
+    <Compile Include="RebateLogWithDetailsResponse.cs" />
+    <Compile Include="LogRebateRetroativoViewModel.cs" />
+    <Compile Include="LogDetail.cs" />
+    <Compile Include="RestricaoExport.cs" />
+    <Compile Include="RestricaoTipoRestricao.cs" />
+    <Compile Include="SaldoRebateSic.cs" />
+    <Compile Include="StatusCalculoRebateHistoricoSic.cs" />
+    <Compile Include="StatusCalculoRebateSic.cs" />
+    <Compile Include="StatusSic.cs" />
+    <Compile Include="TipoBotao.cs" />
+    <Compile Include="TipoclienteSic.cs" />
+    <Compile Include="TiporebateSic.cs" />
+    <Compile Include="Restricao.cs" />
+    <Compile Include="TipoRestricao.cs" />
+    <Compile Include="TipoResultado.cs" />
+    <Compile Include="ViewCalculoFaixaHistoricoRebate.cs" />
+    <Compile Include="ViewGaClienteRebateSic.cs" />
+    <Compile Include="ViewGtClienteRebateSic.cs" />
+    <Compile Include="VolumeCalculoRebateFaixaSic.cs" />
+    <Compile Include="VolumeMensalFaixaRebateSic.cs" />
+    <Compile Include="Custom\VolumeRbc.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Diagramas\Rebate.cd" />
+    <None Include="Diagramas\Rebate_2.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Raizen.SICCadastro.Rebate.Util\Raizen.SICCadastro.Rebate.Util.csproj">
+      <Project>{60431B0C-124F-4D3C-8E37-684644487CBB}</Project>
+      <Name>Raizen.SICCadastro.Rebate.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

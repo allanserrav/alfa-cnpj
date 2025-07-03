@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{94641748-4E21-40B4-BBE6-C11E5EDA9277}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Raizen.SICCadastro.Rebate.DAL</RootNamespace>
+    <AssemblyName>Raizen.SICCadastro.Rebate.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="COSAN.Framework.DBUtil">
+      <HintPath>..\..\Library\COSAN.Framework.DBUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="COSAN.Framework.Factory">
+      <HintPath>..\..\Library\COSAN.Framework.Factory.dll</HintPath>
+    </Reference>
+    <Reference Include="COSAN.Framework.Util">
+      <HintPath>..\..\Library\COSAN.Framework.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Oracle.ManagedDataAccess.19.22.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.10, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\WebSite\packages\System.Text.Json.6.0.10\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgendamentoMensagemSicDAO.cs" />
+    <Compile Include="AgrupamentoredeRebateSicDAO.cs" />
+    <Compile Include="Base\BaseLogIntegracaoSicDAO.cs" />
+    <Compile Include="Custom\AcertoCalculoRebateSicDAO.cs" />
+    <Compile Include="DadosCalculoRebateSicDAO.cs" />
+    <Compile Include="AvisoSicDAO.cs" />
+    <Compile Include="Base\BaseAgendamentoMensagemSicDAO.cs" />
+    <Compile Include="Base\BaseAgrupamentoredeRebateSicDAO.cs" />
+    <Compile Include="Base\BaseAvisoSicDAO.cs" />
+    <Compile Include="Base\BaseCalculoRebateFaixaSicDAO.cs" />
+    <Compile Include="Base\BaseCalculoRebateProporcionalSicDAO.cs" />
+    <Compile Include="Base\BaseCalculoRebateSicDAO.cs" />
+    <Compile Include="Base\BaseCategoriaSicDAO.cs" />
+    <Compile Include="Base\BaseClienteSicDAO.cs" />
+    <Compile Include="Base\BaseClientestatusSicDAO.cs" />
+    <Compile Include="Base\BaseDadosArquivoRebateSicDAO.cs" />
+    <Compile Include="Base\BaseDebitoRebateSicDAO.cs" />
+    <Compile Include="Base\BaseFaixaRebateHistoricoSicDAO.cs" />
+    <Compile Include="Base\BaseFaixarebateSicDAO.cs" />
+    <Compile Include="Base\BaseIgpmPeriodoSicDAO.cs" />
+    <Compile Include="Base\BaseMatrizfilialrebateSicDAO.cs" />
+    <Compile Include="Base\BaseMensagemSicDAO.cs" />
+    <Compile Include="Base\BaseMotivoRegimeEspecialRebateSicDAO.cs" />
+    <Compile Include="Base\BasePeriodoProcessamentoSicDAO.cs" />
+    <Compile Include="Base\BaseProdutoSicDAO.cs" />
+    <Compile Include="Base\BaseReajusteRebateHistoricoSicDAO.cs" />
+    <Compile Include="Base\BaseReajusteRebatexfranquiaSicDAO.cs" />
+    <Compile Include="Base\BaseReajusteSicDAO.cs" />
+    <Compile Include="Base\BaseRebateSicDAO.cs" />
+    <Compile Include="Base\BaseSaldoRebateSicDAO.cs" />
+    <Compile Include="Base\BaseStatusCalculoRebateHistoricoSicDAO.cs" />
+    <Compile Include="Base\BaseStatusCalculoRebateSicDAO.cs" />
+    <Compile Include="Base\BaseStatusSicDAO.cs" />
+    <Compile Include="Base\BaseTipoclienteSicDAO.cs" />
+    <Compile Include="Base\BaseTiporebateSicDAO.cs" />
+    <Compile Include="Base\BaseViewCalculoFaixaHistoricoRebateDAO.cs" />
+    <Compile Include="Base\BaseViewGaClienteRebateSicDAO.cs" />
+    <Compile Include="Base\BaseViewGtClienteRebateSicDAO.cs" />
+    <Compile Include="Base\BaseVolumeCalculoRebateFaixaSicDAO.cs" />
+    <Compile Include="Base\BaseVolumeMensalFaixaRebateSicDAO.cs" />
+    <Compile Include="CalculoRebateFaixaSicDAO.cs" />
+    <Compile Include="CalculoRebateProporcionalSicDAO.cs" />
+    <Compile Include="CalculoRebateSicDAO.cs" />
+    <Compile Include="CategoriaSicDAO.cs" />
+    <Compile Include="ClienteSicDAO.cs" />
+    <Compile Include="ClientestatusSicDAO.cs" />
+    <Compile Include="Custom\CalculoRebateFaixaSicDAO.cs" />
+    <Compile Include="Custom\CalculoRebateProporcionalSicDAO.cs" />
+    <Compile Include="Custom\CalculoRebateSicDAO.cs" />
+    <Compile Include="Custom\DadosArquivoRebateSicDAO.cs" />
+    <Compile Include="Custom\DebitoRebateSicDAO.cs" />
+    <Compile Include="Custom\FaixarebateSicDAO.cs" />
+    <Compile Include="Custom\SaldoRebateSicDAO.cs" />
+    <Compile Include="Custom\StatusCalculoRebateHistoricoSicDAO.cs" />
+    <Compile Include="Custom\VolumeCalculoRebateFaixaSicDAO.cs" />
+    <Compile Include="DadosArquivoRebateSicDAO.cs" />
+    <Compile Include="DebitoRebateSicDAO.cs" />
+    <Compile Include="FaixaRebateHistoricoSicDAO.cs" />
+    <Compile Include="DadosCalculoFaixaRebateSicDAO.cs" />
+    <Compile Include="IgpmPeriodoSicDAO.cs" />
+    <Compile Include="Interface\Custom\ICalculoRebateFaixaSicDAO.cs" />
+    <Compile Include="Interface\Custom\ICalculoRebateProporcionalSicDAO.cs" />
+    <Compile Include="Interface\Custom\ICalculoRebateSicDAO.cs" />
+    <Compile Include="Interface\Custom\IDadosArquivoRebateSicDAO.cs" />
+    <Compile Include="Interface\Custom\IDebitoRebateSicDAO.cs" />
+    <Compile Include="Interface\Custom\IFaixarebateSicDAO.cs" />
+    <Compile Include="Interface\Custom\IRebateSicDAO.cs" />
+    <Compile Include="Interface\Custom\ISaldoRebateSicDAO.cs" />
+    <Compile Include="Interface\Custom\IStatusCalculoRebateHistoricoSicDAO.cs" />
+    <Compile Include="Interface\Custom\IVolumeCalculoRebateFaixaSicDAO.cs" />
+    <Compile Include="Interface\Custom\IVolumeMensalFaixaRebateSicDAO.cs" />
+    <Compile Include="Custom\RebateSicDAO.cs" />
+    <Compile Include="Custom\VolumeMensalFaixaRebateSicDAO.cs" />
+    <Compile Include="FaixarebateSicDAO.cs" />
+    <Compile Include="Interface\IAgendamentoMensagemSicDAO.cs" />
+    <Compile Include="Interface\IAgrupamentoredeRebateSicDAO.cs" />
+    <Compile Include="Interface\IAcertoCalculoRebateSicDAO.cs" />
+    <Compile Include="Interface\IDadosCalculoRebateSicDAO.cs" />
+    <Compile Include="Interface\IAvisoSicDAO.cs" />
+    <Compile Include="Interface\ICalculoRebateFaixaSicDAO.cs" />
+    <Compile Include="Interface\ICalculoRebateProporcionalSicDAO.cs" />
+    <Compile Include="Interface\ICalculoRebateSicDAO.cs" />
+    <Compile Include="Interface\ICategoriaSicDAO.cs" />
+    <Compile Include="Interface\IClienteSicDAO.cs" />
+    <Compile Include="Interface\IClientestatusSicDAO.cs" />
+    <Compile Include="Interface\IDadosArquivoRebateSicDAO.cs" />
+    <Compile Include="Interface\IDebitoRebateSicDAO.cs" />
+    <Compile Include="Interface\IFaixaRebateHistoricoSicDAO.cs" />
+    <Compile Include="Interface\IDadosCalculoFaixaRebateSicDAO.cs" />
+    <Compile Include="Interface\IFaixarebateSicDAO.cs" />
+    <Compile Include="Interface\IIgpmPeriodoSicDAO.cs" />
+    <Compile Include="Interface\ILogIntegracaoSicDAO.cs" />
+    <Compile Include="Interface\IMatrizfilialrebateSicDAO.cs" />
+    <Compile Include="Interface\IMensagemSicDAO.cs" />
+    <Compile Include="Interface\IMotivoRegimeEspecialRebateSicDAO.cs" />
+    <Compile Include="Interface\IPeriodoProcessamentoSicDAO.cs" />
+    <Compile Include="Interface\IProdutoSicDAO.cs" />
+    <Compile Include="Interface\IReajusteRebateHistoricoSicDAO.cs" />
+    <Compile Include="Interface\IReajusteRebatexfranquiaSicDAO.cs" />
+    <Compile Include="Interface\IReajusteSicDAO.cs" />
+    <Compile Include="Interface\IRebateSicDAO.cs" />
+    <Compile Include="Interface\ISaldoRebateSicDAO.cs" />
+    <Compile Include="Interface\IStatusCalculoRebateHistoricoSicDAO.cs" />
+    <Compile Include="Interface\IStatusCalculoRebateSicDAO.cs" />
+    <Compile Include="Interface\IStatusSicDAO.cs" />
+    <Compile Include="Interface\ITipoclienteSicDAO.cs" />
+    <Compile Include="Interface\ITiporebateSicDAO.cs" />
+    <Compile Include="Interface\IViewCalculoFaixaHistoricoRebateDAO.cs" />
+    <Compile Include="Interface\IViewGaClienteRebateSicDAO.cs" />
+    <Compile Include="Interface\IViewGtClienteRebateSicDAO.cs" />
+    <Compile Include="Interface\IVolumeCalculoRebateFaixaSicDAO.cs" />
+    <Compile Include="Interface\IVolumeMensalFaixaRebateSicDAO.cs" />
+    <Compile Include="LogIntegracaoSicDAO.cs" />
+    <Compile Include="MatrizfilialrebateSicDAO.cs" />
+    <Compile Include="MensagemSicDAO.cs" />
+    <Compile Include="MotivoRegimeEspecialRebateSicDAO.cs" />
+    <Compile Include="PeriodoProcessamentoSicDAO.cs" />
+    <Compile Include="ProdutoSicDAO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReajusteRebateHistoricoSicDAO.cs" />
+    <Compile Include="ReajusteRebatexfranquiaSicDAO.cs" />
+    <Compile Include="ReajusteSicDAO.cs" />
+    <Compile Include="RebateSicDAO.cs" />
+    <Compile Include="SaldoRebateSicDAO.cs" />
+    <Compile Include="StatusCalculoRebateHistoricoSicDAO.cs" />
+    <Compile Include="StatusCalculoRebateSicDAO.cs" />
+    <Compile Include="StatusSicDAO.cs" />
+    <Compile Include="TipoclienteSicDAO.cs" />
+    <Compile Include="TiporebateSicDAO.cs" />
+    <Compile Include="ViewCalculoFaixaHistoricoRebateDAO.cs" />
+    <Compile Include="ViewGaClienteRebateSicDAO.cs" />
+    <Compile Include="ViewGtClienteRebateSicDAO.cs" />
+    <Compile Include="VolumeCalculoRebateFaixaSicDAO.cs" />
+    <Compile Include="VolumeMensalFaixaRebateSicDAO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Raizen.SICCadastro.Rebate.Model\Raizen.SICCadastro.Rebate.Model.csproj">
+      <Project>{2E9CBDD2-74C6-40AE-9E54-017419E3EDED}</Project>
+      <Name>Raizen.SICCadastro.Rebate.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Raizen.SICCadastro.Rebate.Util\Raizen.SICCadastro.Rebate.Util.csproj">
+      <Project>{60431B0C-124F-4D3C-8E37-684644487CBB}</Project>
+      <Name>Raizen.SICCadastro.Rebate.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

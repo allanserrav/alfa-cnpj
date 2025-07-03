@@ -1,0 +1,1850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://cosan.com.br/UserSystem/WS/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s1="http://cosan.com.br/UserSystem/WS/AbstractTypes" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://cosan.com.br/UserSystem/WS/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Unified User System Web Service v1.3</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://cosan.com.br/UserSystem/WS/">
+      <s:element name="LoginUserSystem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siglaApp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginUserSystemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginUserSystemResult" type="tns:MessageControl" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MessageControl">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoginActiveDirectory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siglaApp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginActiveDirectoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginActiveDirectoryResult" type="tns:MessageControl" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginInApplication">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siglaApp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginInApplicationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginInApplicationResult" type="tns:MessageControl" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserIsLoggedIn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siglaApp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserIsLoggedInResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserIsLoggedInResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogOff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siglaApp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogOffResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LogOffResult" type="tns:MessageControl" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserPermissions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siglaApp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserPermissionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserPermissionsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProfilesByApplication">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siglaApp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProfilesByApplicationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProfilesByApplicationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserExistsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="expirydate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="tns:eStatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="eStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Ativo" />
+          <s:enumeration value="Inativo" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="UserAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAddResult" type="tns:MessageControl" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserAddType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="expirydate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="tns:eStatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="typeUser" nillable="true" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserAddTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAddTypeResult" type="tns:MessageControl" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="expirydate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" nillable="true" type="tns:eStatus" />
+            <s:element minOccurs="1" maxOccurs="1" name="erasePassword" nillable="true" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserUpdateResult" type="tns:MessageControl" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserUpdateType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="expirydate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" nillable="true" type="tns:eStatus" />
+            <s:element minOccurs="1" maxOccurs="1" name="erasePassword" nillable="true" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="typeUser" nillable="true" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserUpdateTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserUpdateTypeResult" type="tns:MessageControl" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserAssignProfiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arrProfiles" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UserAssignProfilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAssignProfilesResult" type="tns:MessageControl" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserRemoveProfiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arrProfiles" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserRemoveProfilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserRemoveProfilesResult" type="tns:MessageControl" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserRemoveAllProfiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siglaApp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserRemoveAllProfilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserRemoveAllProfilesResult" type="tns:MessageControl" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserChangePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oldPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserChangePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserChangePasswordResult" type="tns:MessageControl" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserSetPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserSetPasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserSetPasswordResult" type="tns:MessageControl" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siglaApp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsersByAppProfile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="appsigla" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="profilename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsersByAppProfileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsersByAppProfileResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaEmpresaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaEmpresaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaEmpresaUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMenuByApplication">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siglaApp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMenuByApplicationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMenuByApplicationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MessageControl" nillable="true" type="tns:MessageControl" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+    <s:schema targetNamespace="http://cosan.com.br/UserSystem/WS/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoginUserSystemSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginUserSystem" />
+  </wsdl:message>
+  <wsdl:message name="LoginUserSystemSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginUserSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginActiveDirectorySoapIn">
+    <wsdl:part name="parameters" element="tns:LoginActiveDirectory" />
+  </wsdl:message>
+  <wsdl:message name="LoginActiveDirectorySoapOut">
+    <wsdl:part name="parameters" element="tns:LoginActiveDirectoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginInApplicationSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginInApplication" />
+  </wsdl:message>
+  <wsdl:message name="LoginInApplicationSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginInApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserIsLoggedInSoapIn">
+    <wsdl:part name="parameters" element="tns:UserIsLoggedIn" />
+  </wsdl:message>
+  <wsdl:message name="UserIsLoggedInSoapOut">
+    <wsdl:part name="parameters" element="tns:UserIsLoggedInResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogOffSoapIn">
+    <wsdl:part name="parameters" element="tns:LogOff" />
+  </wsdl:message>
+  <wsdl:message name="LogOffSoapOut">
+    <wsdl:part name="parameters" element="tns:LogOffResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserPermissionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserPermissions" />
+  </wsdl:message>
+  <wsdl:message name="GetUserPermissionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProfilesByApplicationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProfilesByApplication" />
+  </wsdl:message>
+  <wsdl:message name="GetProfilesByApplicationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProfilesByApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:UserExists" />
+  </wsdl:message>
+  <wsdl:message name="UserExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:UserExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserAddSoapIn">
+    <wsdl:part name="parameters" element="tns:UserAdd" />
+  </wsdl:message>
+  <wsdl:message name="UserAddSoapOut">
+    <wsdl:part name="parameters" element="tns:UserAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserAddTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:UserAddType" />
+  </wsdl:message>
+  <wsdl:message name="UserAddTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:UserAddTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:UserUpdate" />
+  </wsdl:message>
+  <wsdl:message name="UserUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:UserUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserUpdateTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:UserUpdateType" />
+  </wsdl:message>
+  <wsdl:message name="UserUpdateTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:UserUpdateTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserAssignProfilesSoapIn">
+    <wsdl:part name="parameters" element="tns:UserAssignProfiles" />
+  </wsdl:message>
+  <wsdl:message name="UserAssignProfilesSoapOut">
+    <wsdl:part name="parameters" element="tns:UserAssignProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserRemoveProfilesSoapIn">
+    <wsdl:part name="parameters" element="tns:UserRemoveProfiles" />
+  </wsdl:message>
+  <wsdl:message name="UserRemoveProfilesSoapOut">
+    <wsdl:part name="parameters" element="tns:UserRemoveProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserRemoveAllProfilesSoapIn">
+    <wsdl:part name="parameters" element="tns:UserRemoveAllProfiles" />
+  </wsdl:message>
+  <wsdl:message name="UserRemoveAllProfilesSoapOut">
+    <wsdl:part name="parameters" element="tns:UserRemoveAllProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserChangePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:UserChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="UserChangePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:UserChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserSetPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:UserSetPassword" />
+  </wsdl:message>
+  <wsdl:message name="UserSetPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:UserSetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersByAppProfileSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsersByAppProfile" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersByAppProfileSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsersByAppProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEmpresaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaEmpresaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEmpresaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaEmpresaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMenuByApplicationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMenuByApplication" />
+  </wsdl:message>
+  <wsdl:message name="GetMenuByApplicationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMenuByApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginUserSystemHttpGetIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginUserSystemHttpGetOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="LoginActiveDirectoryHttpGetIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginActiveDirectoryHttpGetOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="LoginInApplicationHttpGetIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginInApplicationHttpGetOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="UserIsLoggedInHttpGetIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UserIsLoggedInHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="LogOffHttpGetIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LogOffHttpGetOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="GetUserPermissionsHttpGetIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserPermissionsHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetProfilesByApplicationHttpGetIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProfilesByApplicationHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="UserExistsHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UserExistsHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UserAddHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="expirydate" type="s:string" />
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="userid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UserAddHttpGetOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="UserAssignProfilesHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="arrProfiles" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="UserAssignProfilesHttpGetOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="UserRemoveProfilesHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="arrProfiles" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="UserRemoveProfilesHttpGetOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="UserRemoveAllProfilesHttpGetIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UserRemoveAllProfilesHttpGetOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="UserChangePasswordHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="oldPassword" type="s:string" />
+    <wsdl:part name="newPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UserChangePasswordHttpGetOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="UserSetPasswordHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="newPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UserSetPasswordHttpGetOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersHttpGetIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDetailHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDetailHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersByAppProfileHttpGetIn">
+    <wsdl:part name="appsigla" type="s:string" />
+    <wsdl:part name="profilename" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersByAppProfileHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEmpresaUsuarioHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEmpresaUsuarioHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMenuByApplicationHttpGetIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+    <wsdl:part name="login" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMenuByApplicationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginUserSystemHttpPostIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginUserSystemHttpPostOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="LoginActiveDirectoryHttpPostIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginActiveDirectoryHttpPostOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="LoginInApplicationHttpPostIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginInApplicationHttpPostOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="UserIsLoggedInHttpPostIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UserIsLoggedInHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="LogOffHttpPostIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LogOffHttpPostOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="GetUserPermissionsHttpPostIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserPermissionsHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetProfilesByApplicationHttpPostIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProfilesByApplicationHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="UserExistsHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UserExistsHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UserAddHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="expirydate" type="s:string" />
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="userid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UserAddHttpPostOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="UserAssignProfilesHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="arrProfiles" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="UserAssignProfilesHttpPostOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="UserRemoveProfilesHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="arrProfiles" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="UserRemoveProfilesHttpPostOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="UserRemoveAllProfilesHttpPostIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UserRemoveAllProfilesHttpPostOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="UserChangePasswordHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="oldPassword" type="s:string" />
+    <wsdl:part name="newPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UserChangePasswordHttpPostOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="UserSetPasswordHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="newPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UserSetPasswordHttpPostOut">
+    <wsdl:part name="Body" element="tns:MessageControl" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersHttpPostIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDetailHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDetailHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersByAppProfileHttpPostIn">
+    <wsdl:part name="appsigla" type="s:string" />
+    <wsdl:part name="profilename" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersByAppProfileHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEmpresaUsuarioHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEmpresaUsuarioHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMenuByApplicationHttpPostIn">
+    <wsdl:part name="siglaApp" type="s:string" />
+    <wsdl:part name="login" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMenuByApplicationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="wsUserSystemSoap">
+    <wsdl:operation name="LoginUserSystem">
+      <wsdl:input message="tns:LoginUserSystemSoapIn" />
+      <wsdl:output message="tns:LoginUserSystemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginActiveDirectory">
+      <wsdl:input message="tns:LoginActiveDirectorySoapIn" />
+      <wsdl:output message="tns:LoginActiveDirectorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginInApplication">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Autentica o usuário no Active Directory ou UserSystem e verifica se o mesmo tem acesso a aplicação.</wsdl:documentation>
+      <wsdl:input message="tns:LoginInApplicationSoapIn" />
+      <wsdl:output message="tns:LoginInApplicationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserIsLoggedIn">
+      <wsdl:input message="tns:UserIsLoggedInSoapIn" />
+      <wsdl:output message="tns:UserIsLoggedInSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOff">
+      <wsdl:input message="tns:LogOffSoapIn" />
+      <wsdl:output message="tns:LogOffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPermissions">
+      <wsdl:input message="tns:GetUserPermissionsSoapIn" />
+      <wsdl:output message="tns:GetUserPermissionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfilesByApplication">
+      <wsdl:input message="tns:GetProfilesByApplicationSoapIn" />
+      <wsdl:output message="tns:GetProfilesByApplicationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserExists">
+      <wsdl:input message="tns:UserExistsSoapIn" />
+      <wsdl:output message="tns:UserExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserAdd">
+      <wsdl:input message="tns:UserAddSoapIn" />
+      <wsdl:output message="tns:UserAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserAddType">
+      <wsdl:input message="tns:UserAddTypeSoapIn" />
+      <wsdl:output message="tns:UserAddTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserUpdate">
+      <wsdl:input message="tns:UserUpdateSoapIn" />
+      <wsdl:output message="tns:UserUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserUpdateType">
+      <wsdl:input message="tns:UserUpdateTypeSoapIn" />
+      <wsdl:output message="tns:UserUpdateTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserAssignProfiles">
+      <wsdl:input message="tns:UserAssignProfilesSoapIn" />
+      <wsdl:output message="tns:UserAssignProfilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRemoveProfiles">
+      <wsdl:input message="tns:UserRemoveProfilesSoapIn" />
+      <wsdl:output message="tns:UserRemoveProfilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRemoveAllProfiles">
+      <wsdl:input message="tns:UserRemoveAllProfilesSoapIn" />
+      <wsdl:output message="tns:UserRemoveAllProfilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserChangePassword">
+      <wsdl:input message="tns:UserChangePasswordSoapIn" />
+      <wsdl:output message="tns:UserChangePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserSetPassword">
+      <wsdl:input message="tns:UserSetPasswordSoapIn" />
+      <wsdl:output message="tns:UserSetPasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input message="tns:GetUsersSoapIn" />
+      <wsdl:output message="tns:GetUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetail">
+      <wsdl:input message="tns:GetUserDetailSoapIn" />
+      <wsdl:output message="tns:GetUserDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByAppProfile">
+      <wsdl:input message="tns:GetUsersByAppProfileSoapIn" />
+      <wsdl:output message="tns:GetUsersByAppProfileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEmpresaUsuario">
+      <wsdl:input message="tns:RetornaEmpresaUsuarioSoapIn" />
+      <wsdl:output message="tns:RetornaEmpresaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuByApplication">
+      <wsdl:input message="tns:GetMenuByApplicationSoapIn" />
+      <wsdl:output message="tns:GetMenuByApplicationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsUserSystemHttpGet">
+    <wsdl:operation name="LoginUserSystem">
+      <wsdl:input message="tns:LoginUserSystemHttpGetIn" />
+      <wsdl:output message="tns:LoginUserSystemHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginActiveDirectory">
+      <wsdl:input message="tns:LoginActiveDirectoryHttpGetIn" />
+      <wsdl:output message="tns:LoginActiveDirectoryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginInApplication">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Autentica o usuário no Active Directory ou UserSystem e verifica se o mesmo tem acesso a aplicação.</wsdl:documentation>
+      <wsdl:input message="tns:LoginInApplicationHttpGetIn" />
+      <wsdl:output message="tns:LoginInApplicationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserIsLoggedIn">
+      <wsdl:input message="tns:UserIsLoggedInHttpGetIn" />
+      <wsdl:output message="tns:UserIsLoggedInHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOff">
+      <wsdl:input message="tns:LogOffHttpGetIn" />
+      <wsdl:output message="tns:LogOffHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPermissions">
+      <wsdl:input message="tns:GetUserPermissionsHttpGetIn" />
+      <wsdl:output message="tns:GetUserPermissionsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfilesByApplication">
+      <wsdl:input message="tns:GetProfilesByApplicationHttpGetIn" />
+      <wsdl:output message="tns:GetProfilesByApplicationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserExists">
+      <wsdl:input message="tns:UserExistsHttpGetIn" />
+      <wsdl:output message="tns:UserExistsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserAdd">
+      <wsdl:input message="tns:UserAddHttpGetIn" />
+      <wsdl:output message="tns:UserAddHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserAssignProfiles">
+      <wsdl:input message="tns:UserAssignProfilesHttpGetIn" />
+      <wsdl:output message="tns:UserAssignProfilesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRemoveProfiles">
+      <wsdl:input message="tns:UserRemoveProfilesHttpGetIn" />
+      <wsdl:output message="tns:UserRemoveProfilesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRemoveAllProfiles">
+      <wsdl:input message="tns:UserRemoveAllProfilesHttpGetIn" />
+      <wsdl:output message="tns:UserRemoveAllProfilesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserChangePassword">
+      <wsdl:input message="tns:UserChangePasswordHttpGetIn" />
+      <wsdl:output message="tns:UserChangePasswordHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserSetPassword">
+      <wsdl:input message="tns:UserSetPasswordHttpGetIn" />
+      <wsdl:output message="tns:UserSetPasswordHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input message="tns:GetUsersHttpGetIn" />
+      <wsdl:output message="tns:GetUsersHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetail">
+      <wsdl:input message="tns:GetUserDetailHttpGetIn" />
+      <wsdl:output message="tns:GetUserDetailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByAppProfile">
+      <wsdl:input message="tns:GetUsersByAppProfileHttpGetIn" />
+      <wsdl:output message="tns:GetUsersByAppProfileHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEmpresaUsuario">
+      <wsdl:input message="tns:RetornaEmpresaUsuarioHttpGetIn" />
+      <wsdl:output message="tns:RetornaEmpresaUsuarioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuByApplication">
+      <wsdl:input message="tns:GetMenuByApplicationHttpGetIn" />
+      <wsdl:output message="tns:GetMenuByApplicationHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsUserSystemHttpPost">
+    <wsdl:operation name="LoginUserSystem">
+      <wsdl:input message="tns:LoginUserSystemHttpPostIn" />
+      <wsdl:output message="tns:LoginUserSystemHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginActiveDirectory">
+      <wsdl:input message="tns:LoginActiveDirectoryHttpPostIn" />
+      <wsdl:output message="tns:LoginActiveDirectoryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginInApplication">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Autentica o usuário no Active Directory ou UserSystem e verifica se o mesmo tem acesso a aplicação.</wsdl:documentation>
+      <wsdl:input message="tns:LoginInApplicationHttpPostIn" />
+      <wsdl:output message="tns:LoginInApplicationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserIsLoggedIn">
+      <wsdl:input message="tns:UserIsLoggedInHttpPostIn" />
+      <wsdl:output message="tns:UserIsLoggedInHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOff">
+      <wsdl:input message="tns:LogOffHttpPostIn" />
+      <wsdl:output message="tns:LogOffHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPermissions">
+      <wsdl:input message="tns:GetUserPermissionsHttpPostIn" />
+      <wsdl:output message="tns:GetUserPermissionsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfilesByApplication">
+      <wsdl:input message="tns:GetProfilesByApplicationHttpPostIn" />
+      <wsdl:output message="tns:GetProfilesByApplicationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserExists">
+      <wsdl:input message="tns:UserExistsHttpPostIn" />
+      <wsdl:output message="tns:UserExistsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserAdd">
+      <wsdl:input message="tns:UserAddHttpPostIn" />
+      <wsdl:output message="tns:UserAddHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserAssignProfiles">
+      <wsdl:input message="tns:UserAssignProfilesHttpPostIn" />
+      <wsdl:output message="tns:UserAssignProfilesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRemoveProfiles">
+      <wsdl:input message="tns:UserRemoveProfilesHttpPostIn" />
+      <wsdl:output message="tns:UserRemoveProfilesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRemoveAllProfiles">
+      <wsdl:input message="tns:UserRemoveAllProfilesHttpPostIn" />
+      <wsdl:output message="tns:UserRemoveAllProfilesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserChangePassword">
+      <wsdl:input message="tns:UserChangePasswordHttpPostIn" />
+      <wsdl:output message="tns:UserChangePasswordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserSetPassword">
+      <wsdl:input message="tns:UserSetPasswordHttpPostIn" />
+      <wsdl:output message="tns:UserSetPasswordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input message="tns:GetUsersHttpPostIn" />
+      <wsdl:output message="tns:GetUsersHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetail">
+      <wsdl:input message="tns:GetUserDetailHttpPostIn" />
+      <wsdl:output message="tns:GetUserDetailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByAppProfile">
+      <wsdl:input message="tns:GetUsersByAppProfileHttpPostIn" />
+      <wsdl:output message="tns:GetUsersByAppProfileHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEmpresaUsuario">
+      <wsdl:input message="tns:RetornaEmpresaUsuarioHttpPostIn" />
+      <wsdl:output message="tns:RetornaEmpresaUsuarioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuByApplication">
+      <wsdl:input message="tns:GetMenuByApplicationHttpPostIn" />
+      <wsdl:output message="tns:GetMenuByApplicationHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsUserSystemSoap" type="tns:wsUserSystemSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoginUserSystem">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/LoginUserSystem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginActiveDirectory">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/LoginActiveDirectory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginInApplication">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/LoginInApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserIsLoggedIn">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/UserIsLoggedIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOff">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/LogOff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPermissions">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/GetUserPermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfilesByApplication">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/GetProfilesByApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserExists">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/UserExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserAdd">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/UserAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserAddType">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/UserAddType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserUpdate">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/UserUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserUpdateType">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/UserUpdateType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserAssignProfiles">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/UserAssignProfiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRemoveProfiles">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/UserRemoveProfiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRemoveAllProfiles">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/UserRemoveAllProfiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserChangePassword">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/UserChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserSetPassword">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/UserSetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetail">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/GetUserDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByAppProfile">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/GetUsersByAppProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEmpresaUsuario">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/RetornaEmpresaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuByApplication">
+      <soap:operation soapAction="http://cosan.com.br/UserSystem/WS/GetMenuByApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsUserSystemSoap12" type="tns:wsUserSystemSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoginUserSystem">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/LoginUserSystem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginActiveDirectory">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/LoginActiveDirectory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginInApplication">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/LoginInApplication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserIsLoggedIn">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/UserIsLoggedIn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOff">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/LogOff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPermissions">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/GetUserPermissions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfilesByApplication">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/GetProfilesByApplication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserExists">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/UserExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserAdd">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/UserAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserAddType">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/UserAddType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserUpdate">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/UserUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserUpdateType">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/UserUpdateType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserAssignProfiles">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/UserAssignProfiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRemoveProfiles">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/UserRemoveProfiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRemoveAllProfiles">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/UserRemoveAllProfiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserChangePassword">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/UserChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserSetPassword">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/UserSetPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/GetUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetail">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/GetUserDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByAppProfile">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/GetUsersByAppProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEmpresaUsuario">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/RetornaEmpresaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuByApplication">
+      <soap12:operation soapAction="http://cosan.com.br/UserSystem/WS/GetMenuByApplication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsUserSystemHttpGet" type="tns:wsUserSystemHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="LoginUserSystem">
+      <http:operation location="/LoginUserSystem" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginActiveDirectory">
+      <http:operation location="/LoginActiveDirectory" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginInApplication">
+      <http:operation location="/LoginInApplication" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserIsLoggedIn">
+      <http:operation location="/UserIsLoggedIn" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOff">
+      <http:operation location="/LogOff" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPermissions">
+      <http:operation location="/GetUserPermissions" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfilesByApplication">
+      <http:operation location="/GetProfilesByApplication" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserExists">
+      <http:operation location="/UserExists" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserAdd">
+      <http:operation location="/UserAdd" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserAssignProfiles">
+      <http:operation location="/UserAssignProfiles" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRemoveProfiles">
+      <http:operation location="/UserRemoveProfiles" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRemoveAllProfiles">
+      <http:operation location="/UserRemoveAllProfiles" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserChangePassword">
+      <http:operation location="/UserChangePassword" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserSetPassword">
+      <http:operation location="/UserSetPassword" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <http:operation location="/GetUsers" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetail">
+      <http:operation location="/GetUserDetail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByAppProfile">
+      <http:operation location="/GetUsersByAppProfile" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEmpresaUsuario">
+      <http:operation location="/RetornaEmpresaUsuario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuByApplication">
+      <http:operation location="/GetMenuByApplication" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsUserSystemHttpPost" type="tns:wsUserSystemHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="LoginUserSystem">
+      <http:operation location="/LoginUserSystem" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginActiveDirectory">
+      <http:operation location="/LoginActiveDirectory" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginInApplication">
+      <http:operation location="/LoginInApplication" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserIsLoggedIn">
+      <http:operation location="/UserIsLoggedIn" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOff">
+      <http:operation location="/LogOff" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPermissions">
+      <http:operation location="/GetUserPermissions" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfilesByApplication">
+      <http:operation location="/GetProfilesByApplication" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserExists">
+      <http:operation location="/UserExists" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserAdd">
+      <http:operation location="/UserAdd" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserAssignProfiles">
+      <http:operation location="/UserAssignProfiles" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRemoveProfiles">
+      <http:operation location="/UserRemoveProfiles" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRemoveAllProfiles">
+      <http:operation location="/UserRemoveAllProfiles" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserChangePassword">
+      <http:operation location="/UserChangePassword" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserSetPassword">
+      <http:operation location="/UserSetPassword" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <http:operation location="/GetUsers" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetail">
+      <http:operation location="/GetUserDetail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByAppProfile">
+      <http:operation location="/GetUsersByAppProfile" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEmpresaUsuario">
+      <http:operation location="/RetornaEmpresaUsuario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuByApplication">
+      <http:operation location="/GetMenuByApplication" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsUserSystem">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Unified User System Web Service v1.3</wsdl:documentation>
+    <wsdl:port name="wsUserSystemSoap" binding="tns:wsUserSystemSoap">
+      <soap:address location="http://services-dev.cosan.com.br/UserSystemServices/wsUserSystem.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsUserSystemSoap12" binding="tns:wsUserSystemSoap12">
+      <soap12:address location="http://services-dev.cosan.com.br/UserSystemServices/wsUserSystem.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsUserSystemHttpGet" binding="tns:wsUserSystemHttpGet">
+      <http:address location="http://services-dev.cosan.com.br/UserSystemServices/wsUserSystem.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsUserSystemHttpPost" binding="tns:wsUserSystemHttpPost">
+      <http:address location="http://services-dev.cosan.com.br/UserSystemServices/wsUserSystem.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

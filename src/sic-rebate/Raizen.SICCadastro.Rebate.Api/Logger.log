@@ -1,0 +1,79 @@
+
+11/02/2025 21:26:09 - vasco: Erro Rebate não marcado como retroativo.:    em Raizen.SICCadastro.Rebate.BLL.CalculoBonificacaoRebateBLO.CalcularRetroativo(RebateSic rebateSic, String url, String login) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Common\Raizen.SICCadastro.Rebate.BLL\Custom\CalculoBonificacaoRebateBLO.cs:linha 1126
+   em Raizen.SICCadastro.Rebate.Api.Controllers.RebateController.CalcularRetroativo(Int32 id) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Raizen.SICCadastro.Rebate.Api\Controllers\RebateController.cs:linha 115
+
+11/02/2025 21:37:03 - vasco: Erro Tentativa de carregar bibliotecas de cliente Oracle resultou em BadImageFormatException.  Esse problema ocorrerá ao executar em modo de 64 bits com componentes de cliente Oracle de 32 bits instalados.:    em System.Data.OracleClient.OCI.DetermineClientVersion()
+   em System.Data.OracleClient.OracleInternalConnection.OpenOnLocalTransaction(String userName, String password, String serverName, Boolean integratedSecurity, Boolean unicode, Boolean omitOracleConnectionName)
+   em System.Data.OracleClient.OracleInternalConnection..ctor(OracleConnectionString connectionOptions)
+   em System.Data.OracleClient.OracleConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   em System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   em System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   em System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   em System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   em System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   em System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   em System.Data.OracleClient.OracleConnection.Open()
+   em COSAN.Framework.DBUtil.DatabaseManager..ctor(String configurationName)
+   em Raizen.SICCadastro.Rebate.DAL.VolumeMensalFaixaRebateSicDAO.SelecionarVolumeRbc(DateTime inicio, DateTime fim, List`1 listIBM) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Common\Raizen.SICCadastro.Rebate.DAL\Custom\VolumeMensalFaixaRebateSicDAO.cs:linha 159
+   em Raizen.SICCadastro.Rebate.BLL.VolumeMensalFaixaRebateSicBLO.SelecionarVolumeRbc(DateTime inicio, DateTime fim, List`1 listRebateSic) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Common\Raizen.SICCadastro.Rebate.BLL\Custom\VolumeMensalFaixaRebateSicBLO.cs:linha 30
+   em Raizen.SICCadastro.Rebate.BLL.BuscaVolumeRebateBLO.SelecionarVolumesListaRebate(IList`1 listRebateSic, List`1 listFaixaRebateSic, DateTime dataInicioPeriodo, DateTime dataFimPeriodo, Boolean recalculo, IList`1& volumesSelecionados, String url, String login) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Common\Raizen.SICCadastro.Rebate.BLL\Custom\BuscaVolumeRebateBLO.cs:linha 264
+   em Raizen.SICCadastro.Rebate.BLL.CalculoBonificacaoRebateBLO.CalcularRetroativo(RebateSic rebateSic, String url, String login) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Common\Raizen.SICCadastro.Rebate.BLL\Custom\CalculoBonificacaoRebateBLO.cs:linha 1126
+   em Raizen.SICCadastro.Rebate.Api.Controllers.RebateController.CalcularRetroativo(Int32 id) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Raizen.SICCadastro.Rebate.Api\Controllers\RebateController.cs:linha 115
+
+12/02/2025 18:13:37 - vasco: Erro System.Data.OracleClient exige software cliente Oracle version 8.1.7 ou posterior.:    em System.Data.OracleClient.OCI.DetermineClientVersion()
+   em System.Data.OracleClient.OracleInternalConnection.OpenOnLocalTransaction(String userName, String password, String serverName, Boolean integratedSecurity, Boolean unicode, Boolean omitOracleConnectionName)
+   em System.Data.OracleClient.OracleInternalConnection..ctor(OracleConnectionString connectionOptions)
+   em System.Data.OracleClient.OracleConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   em System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   em System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   em System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   em System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   em System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   em System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   em System.Data.OracleClient.OracleConnection.Open()
+   em COSAN.Framework.DBUtil.DatabaseManager..ctor(String configurationName)
+   em Raizen.SICCadastro.Rebate.DAL.VolumeMensalFaixaRebateSicDAO.SelecionarVolumeRbc(DateTime inicio, DateTime fim, List`1 listIBM) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Common\Raizen.SICCadastro.Rebate.DAL\Custom\VolumeMensalFaixaRebateSicDAO.cs:linha 159
+   em Raizen.SICCadastro.Rebate.BLL.VolumeMensalFaixaRebateSicBLO.SelecionarVolumeRbc(DateTime inicio, DateTime fim, List`1 listRebateSic) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Common\Raizen.SICCadastro.Rebate.BLL\Custom\VolumeMensalFaixaRebateSicBLO.cs:linha 30
+   em Raizen.SICCadastro.Rebate.BLL.BuscaVolumeRebateBLO.SelecionarVolumesListaRebate(IList`1 listRebateSic, List`1 listFaixaRebateSic, DateTime dataInicioPeriodo, DateTime dataFimPeriodo, Boolean recalculo, IList`1& volumesSelecionados, String url, String login) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Common\Raizen.SICCadastro.Rebate.BLL\Custom\BuscaVolumeRebateBLO.cs:linha 264
+   em Raizen.SICCadastro.Rebate.BLL.CalculoBonificacaoRebateBLO.CalcularRetroativo(RebateSic rebateSic, String url, String login) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Common\Raizen.SICCadastro.Rebate.BLL\Custom\CalculoBonificacaoRebateBLO.cs:linha 1126
+   em Raizen.SICCadastro.Rebate.Api.Controllers.RebateController.CalcularRetroativo(Int32 id) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Raizen.SICCadastro.Rebate.Api\Controllers\RebateController.cs:linha 115
+
+12/02/2025 18:13:53 - vasco: Erro System.Data.OracleClient exige software cliente Oracle version 8.1.7 ou posterior.:    em System.Data.OracleClient.OCI.DetermineClientVersion()
+   em System.Data.OracleClient.OracleInternalConnection.OpenOnLocalTransaction(String userName, String password, String serverName, Boolean integratedSecurity, Boolean unicode, Boolean omitOracleConnectionName)
+   em System.Data.OracleClient.OracleInternalConnection..ctor(OracleConnectionString connectionOptions)
+   em System.Data.OracleClient.OracleConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   em System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   em System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   em System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   em System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   em System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   em System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   em System.Data.OracleClient.OracleConnection.Open()
+   em COSAN.Framework.DBUtil.DatabaseManager..ctor(String configurationName)
+   em Raizen.SICCadastro.Rebate.DAL.VolumeMensalFaixaRebateSicDAO.SelecionarVolumeRbc(DateTime inicio, DateTime fim, List`1 listIBM) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Common\Raizen.SICCadastro.Rebate.DAL\Custom\VolumeMensalFaixaRebateSicDAO.cs:linha 159
+   em Raizen.SICCadastro.Rebate.BLL.VolumeMensalFaixaRebateSicBLO.SelecionarVolumeRbc(DateTime inicio, DateTime fim, List`1 listRebateSic) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Common\Raizen.SICCadastro.Rebate.BLL\Custom\VolumeMensalFaixaRebateSicBLO.cs:linha 30
+   em Raizen.SICCadastro.Rebate.BLL.BuscaVolumeRebateBLO.SelecionarVolumesListaRebate(IList`1 listRebateSic, List`1 listFaixaRebateSic, DateTime dataInicioPeriodo, DateTime dataFimPeriodo, Boolean recalculo, IList`1& volumesSelecionados, String url, String login) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Common\Raizen.SICCadastro.Rebate.BLL\Custom\BuscaVolumeRebateBLO.cs:linha 264
+   em Raizen.SICCadastro.Rebate.BLL.CalculoBonificacaoRebateBLO.CalcularRetroativo(RebateSic rebateSic, String url, String login) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Common\Raizen.SICCadastro.Rebate.BLL\Custom\CalculoBonificacaoRebateBLO.cs:linha 1126
+   em Raizen.SICCadastro.Rebate.Api.Controllers.RebateController.CalcularRetroativo(Int32 id) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Raizen.SICCadastro.Rebate.Api\Controllers\RebateController.cs:linha 115
+
+12/02/2025 19:44:58 - vasco: Erro Não foi possível localizar o elemento de ponto de extremidade padrão que referencia o contrato 'wsConsultarDebitos.wsConsultaDebitosSoap' na seção de configuração do ServiceModel cliente. Isso pode ter ocorrido devido à falta de um arquivo de configuração para o seu aplicativo ou porque nenhum elemento de ponto de extremidade correspondendo a este contrato pôde ser encontrado no elemento cliente.:    em System.ServiceModel.Description.ConfigLoader.LoadChannelBehaviors(ServiceEndpoint serviceEndpoint, String configurationName)
+   em System.ServiceModel.ChannelFactory.ApplyConfiguration(String configurationName, Configuration configuration)
+   em System.ServiceModel.ChannelFactory.InitializeEndpoint(String configurationName, EndpointAddress address)
+   em System.ServiceModel.ChannelFactory`1..ctor(String endpointConfigurationName, EndpointAddress remoteAddress)
+   em System.ServiceModel.ConfigurationEndpointTrait`1.CreateSimplexFactory()
+   em System.ServiceModel.ClientBase`1.CreateChannelFactoryRef(EndpointTrait`1 endpointTrait)
+   em System.ServiceModel.ClientBase`1.InitializeChannelFactoryRef()
+   em Raizen.SICCadastro.Rebate.SAL.wsConsultarDebitos.wsConsultaDebitosSoapClient..ctor() na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Common\Raizen.SICCadastro.Rebate.SAL\Service References\wsConsultarDebitos\Reference.cs:linha 342
+   em Raizen.SICCadastro.Rebate.BLL.CalculoBonificacaoRebateBLO.ProcessarDebitos(List`1 listCalculoRebateSic) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Common\Raizen.SICCadastro.Rebate.BLL\Custom\CalculoBonificacaoRebateBLO.cs:linha 396
+   em Raizen.SICCadastro.Rebate.BLL.CalculoBonificacaoRebateBLO.CalcularRetroativo(RebateSic rebateSic, String url, String login) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Common\Raizen.SICCadastro.Rebate.BLL\Custom\CalculoBonificacaoRebateBLO.cs:linha 1126
+   em Raizen.SICCadastro.Rebate.Api.Controllers.RebateController.CalcularRetroativo(Int32 id) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Raizen.SICCadastro.Rebate.Api\Controllers\RebateController.cs:linha 115
+
+12/02/2025 19:45:29 - vasco: Erro Não é possível executar o cálculo retroativo de um rebate que possua cálculos anteriores.:    em Raizen.SICCadastro.Rebate.BLL.CalculoBonificacaoRebateBLO.CalcularRetroativo(RebateSic rebateSic, String url, String login) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Common\Raizen.SICCadastro.Rebate.BLL\Custom\CalculoBonificacaoRebateBLO.cs:linha 1126
+   em Raizen.SICCadastro.Rebate.Api.Controllers.RebateController.CalcularRetroativo(Int32 id) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Raizen.SICCadastro.Rebate.Api\Controllers\RebateController.cs:linha 115
+
+20/02/2025 12:41:58 - vasco: Erro Uma exceção foi acionada pelo destino de uma chamada.:    em System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   em System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   em System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   em System.Activator.CreateInstance(Type type)
+   em COSAN.Framework.Factory.Factory.CreateInstance[T](String typeName, String nameSpace)
+   em Raizen.SICCadastro.Rebate.Api.Controllers.RebateController.CalcularRetroativo(Int32 id) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Raizen.SICCadastro.Rebate.Api\Controllers\RebateController.cs:linha 115

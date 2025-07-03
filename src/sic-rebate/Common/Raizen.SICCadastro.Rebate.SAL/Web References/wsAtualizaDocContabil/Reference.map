@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://cpsvsappid01.cosan.rede:50000/dir/wsdl?senderParty=&amp;senderService=SIC&amp;receiverParty=&amp;receiverService=&amp;interface=SIC_SyncOutAtualizaDocContabil&amp;interfaceNamespace=urn:sic.raizen.com/xi/fi" filename="SIC_SyncOutAtualizaDocContabil.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

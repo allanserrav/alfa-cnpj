@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.raizen.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.raizen.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.raizen.com/">
+      <s:element name="ObterListaIbmPagadorPorIbmControlador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ibm" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterListaIbmPagadorPorIbmControladorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterListaIbmPagadorPorIbmControladorResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObterListaDebitosPorIbmPagador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ibm" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterListaDebitosPorIbmPagadorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterListaDebitosPorIbmPagadorResult" type="tns:ArrayOfDebitoRbc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDebitoRbc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DebitoRbc" nillable="true" type="tns:DebitoRbc" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DebitoRbc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NrClientePagador" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DtVencimentoOriginal" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DiasVencidos" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VlMontante" nillable="true" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObterListaDebitosPorIbmControlador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ibm" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterListaDebitosPorIbmControladorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterListaDebitosPorIbmControladorResult" type="tns:ArrayOfDebitoRbc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ObterListaIbmPagadorPorIbmControladorSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterListaIbmPagadorPorIbmControlador" />
+  </wsdl:message>
+  <wsdl:message name="ObterListaIbmPagadorPorIbmControladorSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterListaIbmPagadorPorIbmControladorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterListaDebitosPorIbmPagadorSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterListaDebitosPorIbmPagador" />
+  </wsdl:message>
+  <wsdl:message name="ObterListaDebitosPorIbmPagadorSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterListaDebitosPorIbmPagadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterListaDebitosPorIbmControladorSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterListaDebitosPorIbmControlador" />
+  </wsdl:message>
+  <wsdl:message name="ObterListaDebitosPorIbmControladorSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterListaDebitosPorIbmControladorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsConsultaDebitosSoap">
+    <wsdl:operation name="ObterListaIbmPagadorPorIbmControlador">
+      <wsdl:input message="tns:ObterListaIbmPagadorPorIbmControladorSoapIn" />
+      <wsdl:output message="tns:ObterListaIbmPagadorPorIbmControladorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaDebitosPorIbmPagador">
+      <wsdl:input message="tns:ObterListaDebitosPorIbmPagadorSoapIn" />
+      <wsdl:output message="tns:ObterListaDebitosPorIbmPagadorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaDebitosPorIbmControlador">
+      <wsdl:input message="tns:ObterListaDebitosPorIbmControladorSoapIn" />
+      <wsdl:output message="tns:ObterListaDebitosPorIbmControladorSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsConsultaDebitosSoap" type="tns:wsConsultaDebitosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObterListaIbmPagadorPorIbmControlador">
+      <soap:operation soapAction="http://www.raizen.com/ObterListaIbmPagadorPorIbmControlador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaDebitosPorIbmPagador">
+      <soap:operation soapAction="http://www.raizen.com/ObterListaDebitosPorIbmPagador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaDebitosPorIbmControlador">
+      <soap:operation soapAction="http://www.raizen.com/ObterListaDebitosPorIbmControlador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsConsultaDebitosSoap12" type="tns:wsConsultaDebitosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObterListaIbmPagadorPorIbmControlador">
+      <soap12:operation soapAction="http://www.raizen.com/ObterListaIbmPagadorPorIbmControlador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaDebitosPorIbmPagador">
+      <soap12:operation soapAction="http://www.raizen.com/ObterListaDebitosPorIbmPagador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaDebitosPorIbmControlador">
+      <soap12:operation soapAction="http://www.raizen.com/ObterListaDebitosPorIbmControlador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsConsultaDebitos">
+    <wsdl:port name="wsConsultaDebitosSoap" binding="tns:wsConsultaDebitosSoap">
+      <soap:address location="http://sic-dev.raizen.com/servicos/ConsultaDebitos/wsConsultaDebitos.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsConsultaDebitosSoap12" binding="tns:wsConsultaDebitosSoap12">
+      <soap12:address location="http://sic-dev.raizen.com/servicos/ConsultaDebitos/wsConsultaDebitos.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

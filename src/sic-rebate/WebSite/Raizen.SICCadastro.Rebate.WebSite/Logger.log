@@ -1,0 +1,8 @@
+
+12/02/2025 21:47:33 - vasco: Erro Valor não pode ser nulo.
+Nome do parâmetro: value:    em System.String.Join(String separator, String[] value)
+   em Raizen.SICCadastro.Rebate.WebSite.Login.CriaCookie(String nome, String[] valor) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\WebSite\Raizen.SICCadastro.Rebate.WebSite\Login.aspx.cs:linha 125
+   em Raizen.SICCadastro.Rebate.WebSite.Login.btnEntrar_Click(Object sender, EventArgs e) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\WebSite\Raizen.SICCadastro.Rebate.WebSite\Login.aspx.cs:linha 72
+
+12/02/2025 22:02:31 - vasco: Erro Não é possível calcular o retroativo: O cliente não está com status aceito.:    em Raizen.SICCadastro.Rebate.BLL.CalculoBonificacaoRebateBLO.CalcularRetroativo(RebateSic rebateSic, String url, String login) na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\Common\Raizen.SICCadastro.Rebate.BLL\Custom\CalculoBonificacaoRebateBLO.cs:linha 1126
+   em Raizen.SICCadastro.Rebate.WebSite.DetalheClienteRebate.CalcularRetroativo() na C:\Users\vasco\source\repos\raizen-it\sic-rebate-app\src\WebSite\Raizen.SICCadastro.Rebate.WebSite\DetalheClienteRebate.aspx.cs:linha 315
