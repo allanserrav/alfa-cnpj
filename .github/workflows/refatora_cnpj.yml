@@ -1,0 +1,46 @@
+name: Refatora tratamento de CNPJ
+
+on:
+  workflow_dispatch:   # Permite rodar manualmente pelo GitHub
+  push:
+    paths:
+      - '**.py'        # Ou ajuste para rodar em outras condições
+
+jobs:
+  refatora:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configura Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instala dependências
+        run: pip install openai
+
+      - name: Refatora arquivos usando OpenAI GPT
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python refatora_com_openai.py
+
+      - name: Commita e faz push se houver mudanças
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet || (
+            git checkout -b refatoracao-cnpj-automatica
+            git add .
+            git commit -m "Refatoração automática de CNPJ via OpenAI"
+            git push origin refatoracao-cnpj-automatica
+          )
+
+      - name: Cria Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: refatoracao-cnpj-automatica
+          title: "Refatoração automática de CNPJ"
+          body: "Esta PR foi criada automaticamente pelo GitHub Actions usando a OpenAI API para refatorar o tratamento de CNPJ Alfanuméricos."
+          base: main
